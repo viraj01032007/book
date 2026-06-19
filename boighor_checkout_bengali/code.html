@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>চেকআউট | Boighor - দ্য ডিজিটাল আতেলিয়ের</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=Noto+Sans+Bengali:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c4c7c7",
+                    "secondary-container": "#e1dfdb",
+                    "secondary-fixed-dim": "#c8c6c2",
+                    "on-background": "#1c1c16",
+                    "secondary-fixed": "#e4e2dd",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1c1c16",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#f2ede4",
+                    "surface-container-highest": "#e6e2d9",
+                    "on-secondary-fixed": "#1b1c19",
+                    "on-surface-variant": "#444748",
+                    "primary-container": "#1c1b1b",
+                    "inverse-primary": "#c8c6c5",
+                    "on-tertiary-fixed": "#191d0e",
+                    "surface-container-high": "#ece8df",
+                    "secondary": "#5e5e5b",
+                    "tertiary": "#000000",
+                    "on-secondary-fixed-variant": "#474744",
+                    "background": "#fdf9f0",
+                    "tertiary-fixed": "#e0e5cc",
+                    "surface-bright": "#fdf9f0",
+                    "outline": "#747878",
+                    "on-tertiary-container": "#818671",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#c4c9b1",
+                    "primary": "#000000",
+                    "surface-container-low": "#f7f3ea",
+                    "tertiary-container": "#191d0e",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dedad1",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-primary-fixed": "#1c1b1b",
+                    "inverse-on-surface": "#f5f0e7",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#32302a",
+                    "on-tertiary-fixed-variant": "#444937",
+                    "surface-tint": "#5f5e5e",
+                    "primary-fixed": "#e5e2e1",
+                    "surface": "#fdf9f0",
+                    "surface-variant": "#e6e2d9",
+                    "on-secondary-container": "#63635f",
+                    "on-primary-container": "#858383",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#c8c6c5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "container-max": "1280px",
+                    "stack-md": "24px",
+                    "margin-mobile": "20px",
+                    "gutter": "32px",
+                    "margin-desktop": "64px",
+                    "stack-lg": "48px",
+                    "stack-sm": "12px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Playfair Display", "Noto Sans Bengali"],
+                    "headline-lg-mobile": ["Playfair Display", "Noto Sans Bengali"],
+                    "label-md": ["Inter", "Noto Sans Bengali"],
+                    "headline-lg": ["Playfair Display", "Noto Sans Bengali"],
+                    "display-lg": ["Playfair Display", "Noto Sans Bengali"],
+                    "caption": ["Inter", "Noto Sans Bengali"],
+                    "body-md": ["Inter", "Noto Sans Bengali"],
+                    "body-lg": ["Inter", "Noto Sans Bengali"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fdf9f0;
+            color: #1c1c16;
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Noto Sans Bengali', 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .luxury-shadow {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+        }
+        .input-underline {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid #747878;
+            background: transparent;
+            border-radius: 0;
+            padding-left: 0;
+            padding-right: 0;
+            transition: border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .input-underline:focus {
+            outline: none;
+            box-shadow: none;
+            border-bottom: 1px solid #000000;
+            border-color: #000000;
+        }
+        .premium-btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        .premium-btn:hover {
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body class="font-body-md bg-background min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-background/80 backdrop-blur-md border-b border-outline-variant/30 sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="text-headline-md font-display-lg font-bold text-primary tracking-tight">Boighor</div>
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-[13px] uppercase tracking-widest" href="#">ক্যাটালগ</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-[13px] uppercase tracking-widest" href="#">কালেকশন</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-[13px] uppercase tracking-widest" href="#">আমাদের কথা</a>
+</div>
+<div class="flex items-center space-x-stack-md">
+<button class="relative text-primary hover:opacity-60 transition-opacity" onclick="toggleSideCart()">
+<span class="material-symbols-outlined !text-[24px]">shopping_bag</span>
+<span class="absolute -top-1.5 -right-1.5 bg-primary text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold">২</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover" data-alt="User profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDELjkVIn7_2z4MG-6rRo1txHbeWMsRCXU-KYtqn6RGNzwusPh9lefWhQP_6Fv-36JTafuiXXHTDI8ZBbpzzKNrV3e6c-d8D3s-RGqVaPqT1_Hu6xFJR5XcGxxMEK1mzOqnRAAujnx60CgWPsfaCZgdBXMSFIJBZ51qd1OyYmZ-3Pj_0hkw0ytWq8GDI6CdcPiEqxa8KPBYzkbm6D4QYhYUalduWpwpow7Er09pGPxHlFridssfAeIV9pV8aZau6juWILPl1gonsk-g"/>
+</div>
+</div>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Left Side: Checkout Form -->
+<div class="lg:col-span-7 space-y-20">
+<section>
+<h1 class="text-display-lg font-display-lg mb-12 border-b border-primary/10 pb-6">শিপিং তথ্য</h1>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+<div class="space-y-2">
+<label class="text-[11px] uppercase tracking-[0.2em] text-on-surface-variant font-semibold block">সম্পূর্ণ নাম</label>
+<input class="w-full input-underline text-body-md py-3 placeholder:text-outline-variant/50" placeholder="আপনার পুরো নাম লিখুন" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-[11px] uppercase tracking-[0.2em] text-on-surface-variant font-semibold block">ফোন নম্বর</label>
+<input class="w-full input-underline text-body-md py-3 placeholder:text-outline-variant/50" placeholder="+৯১" type="tel"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="text-[11px] uppercase tracking-[0.2em] text-on-surface-variant font-semibold block">ডেলিভারি ঠিকানা</label>
+<textarea class="w-full input-underline text-body-md py-3 resize-none placeholder:text-outline-variant/50" placeholder="রাস্তার ঠিকানা, ল্যান্ডমার্ক এবং শহর" rows="2"></textarea>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-headline-md font-display-lg mb-8">শিপিং পদ্ধতি</h2>
+<div class="space-y-4">
+<label class="flex items-center justify-between p-6 border border-outline-variant/40 bg-white/50 cursor-pointer hover:border-primary transition-all group">
+<div class="flex items-center space-x-6">
+<input checked="" class="text-primary focus:ring-0 w-4 h-4 rounded-full border-outline-variant" name="shipping" type="radio"/>
+<div>
+<span class="block text-body-lg font-medium">স্ট্যান্ডার্ড কুরিয়ার</span>
+<span class="text-caption text-on-surface-variant italic">৩-৫ কার্যদিবস</span>
+</div>
+</div>
+<span class="font-semibold text-lg">₹৫০</span>
+</label>
+<label class="flex items-center justify-between p-6 border border-outline-variant/40 bg-white/50 cursor-pointer hover:border-primary transition-all group">
+<div class="flex items-center space-x-6">
+<input class="text-primary focus:ring-0 w-4 h-4 rounded-full border-outline-variant" name="shipping" type="radio"/>
+<div>
+<span class="block text-body-lg font-medium">এক্সপ্রেস ডেলিভারি</span>
+<span class="text-caption text-on-surface-variant italic">পরের দিন ডেলিভারি</span>
+</div>
+</div>
+<span class="font-semibold text-lg">₹১৫০</span>
+</label>
+</div>
+</section>
+<section>
+<h2 class="text-headline-md font-display-lg mb-8">পেমেন্ট পদ্ধতি</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<button class="premium-btn flex items-center justify-center space-x-3 p-6 border border-primary bg-primary text-white hover:bg-black transition-all">
+<span class="material-symbols-outlined !text-[20px]">payments</span>
+<span class="text-[13px] uppercase tracking-widest font-semibold">ইউপিআই (UPI) পেমেন্ট</span>
+</button>
+<button class="premium-btn flex items-center justify-center space-x-3 p-6 border border-outline hover:border-primary transition-all">
+<span class="material-symbols-outlined !text-[20px]">credit_card</span>
+<span class="text-[13px] uppercase tracking-widest font-semibold">কার্ড / নেটব্যাংকিং</span>
+</button>
+</div>
+</section>
+<div class="pt-8">
+<button class="premium-btn w-full py-6 bg-primary text-on-primary text-xl font-display-lg tracking-widest hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300">
+                        অর্ডার সম্পন্ন করুন
+                    </button>
+<p class="text-center text-[11px] text-on-surface-variant mt-6 uppercase tracking-widest opacity-60">ক্লিক করার মাধ্যমে, আপনি আমাদের বিক্রয়ের শর্তাবলী এবং গোপনীয়তা নীতিতে সম্মত হচ্ছেন।</p>
+</div>
+</div>
+<!-- Right Side: Order Summary (Desktop view) -->
+<div class="hidden lg:block lg:col-span-5 sticky top-32">
+<div class="bg-white p-10 border border-outline-variant/20 luxury-shadow">
+<h2 class="text-headline-md font-display-lg border-b border-outline-variant/20 pb-6 mb-8 uppercase tracking-tight">অর্ডার সারসংক্ষেপ</h2>
+<div class="space-y-8 mb-10">
+<!-- Book Item 1 -->
+<div class="flex space-x-6">
+<div class="w-24 h-32 bg-secondary-container flex-shrink-0 shadow-sm overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Maharaja Krishnachandra o Samakal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGg_qbAuzqmn33GUCMZ-iL13ix76IeSolO9wt7xnn959y3W6BJqEAi78WoWsjvy9o3kduKOv04kEBqiywOJo0rMn3DAfqBLBwBa9nQb9CxBzj8EXThWU8kkMZ2TfuZoNh3fhPFXEWJy7BNBPuPCREUJJHPo7Z-Zq8gqYzjhmk-Ei2mdMUQK1cRU2bdeh0WkP17XNkvkr_qOWal6jLtix9pc2L73rCyBr-Omwrtmon66T1Y_9WuykW-J9NZTx6KrvzPMqVI13T2jNvO"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<h4 class="text-body-lg font-display-lg leading-tight text-primary">মহারাজা কৃষ্ণচন্দ্র ও সমকাল</h4>
+<p class="text-caption text-on-surface-variant mt-2 italic font-serif">মুদ্রা পাবলিকেশন</p>
+</div>
+<div class="flex justify-between items-end border-t border-outline-variant/10 pt-3">
+<span class="text-[12px] uppercase tracking-widest text-on-surface-variant font-medium">পরিমাণ: ১</span>
+<span class="font-semibold text-lg">₹৪৫০</span>
+</div>
+</div>
+</div>
+<!-- Book Item 2 -->
+<div class="flex space-x-6">
+<div class="w-24 h-32 bg-secondary-container flex-shrink-0 shadow-sm overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Mughal E Rasui" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcnLKw1OVxtikoGA5mJZCU1jceTH_c0ZgQ_D4nMf4kQZlqSGbys48A_tjcO1K3eQnqgmug1-RwvHsuaOX9BNWHfATXH8zaGPPT-DwvxIQTzOWL3ZatXpfigdqJUEX9UU6Xv98gt5n74vapcOvFBzN-9grS6SD6Mpz6SoFUGOiFDh7Hw7clNcdUDoEtPDhkXD3A_i32O5ocS9tjI2QWmV6UPB3KwHipQKzZj3XH3YNszstmPjSYnGS_KmoA9vWyshxKZsEODvlW4-lx"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<h4 class="text-body-lg font-display-lg leading-tight text-primary">মুঘল ই রসুই</h4>
+<p class="text-caption text-on-surface-variant mt-2 italic font-serif">মুদ্রা পাবলিকেশন</p>
+</div>
+<div class="flex justify-between items-end border-t border-outline-variant/10 pt-3">
+<span class="text-[12px] uppercase tracking-widest text-on-surface-variant font-medium">পরিমাণ: ১</span>
+<span class="font-semibold text-lg">₹৮৫০</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4 border-t border-primary/10 pt-8">
+<div class="flex justify-between text-[13px] uppercase tracking-widest text-on-surface-variant">
+<span>উপ-মোট</span>
+<span>₹১৩০০</span>
+</div>
+<div class="flex justify-between text-[13px] uppercase tracking-widest text-on-surface-variant">
+<span>শিপিং</span>
+<span>₹৫০</span>
+</div>
+<div class="flex justify-between text-2xl font-display-lg pt-4 text-primary">
+<span>মোট</span>
+<span>₹১৩৫০</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- SideNavBar (Mobile / Slide-over Overlay) -->
+<div class="fixed inset-0 z-[60] opacity-0 pointer-events-none transition-all duration-500" id="side-cart">
+<div class="absolute inset-0 bg-black/40 backdrop-blur-md" onclick="toggleSideCart()"></div>
+<aside class="fixed right-0 top-0 h-full w-full sm:w-[450px] bg-background shadow-2xl border-l border-outline-variant/20 transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col p-10">
+<div class="flex justify-between items-center mb-12">
+<div class="text-display-lg font-display-lg text-primary tracking-tight">আপনার ব্যাগ</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors" onclick="toggleSideCart()">
+<span class="material-symbols-outlined !text-[32px]">close</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto space-y-10 pr-4 custom-scrollbar">
+<!-- Mobile Item 1 -->
+<div class="flex space-x-6 pb-6 border-b border-outline-variant/10">
+<div class="w-24 h-32 bg-secondary-container flex-shrink-0 shadow-sm overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Maharaja Krishnachandra" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkBUhU-f0GZ0eR4SOyTGMk8Vwa_iIMyc7hq_0G9imY9rIWRycARC4FExmTd7Z1OTPHhsxAwed6unFNl60awOkhneVTD6hS_sAnz6M2s4g9_F1NCQPSEAeWm1vpr9XECsfbITasDN8ss_z_u9zg0ZqGw-nTiPBbasXhvi2kxBzvHtxDF58RGtXB0ZSpW2ucRHig_VLt2ya-Cjt4sNt7txvoOS2JcVHIVMAp_LjEPpZ2zlBVVeX7h5MCJPz6bedDAEN3QG-DmCx8LNTM"/>
+</div>
+<div class="flex-1">
+<h4 class="text-body-lg font-display-lg text-primary">মহারাজা কৃষ্ণচন্দ্র ও সমকাল</h4>
+<div class="flex justify-between items-center mt-6">
+<div class="flex items-center space-x-6 border-b border-outline-variant/30 pb-1">
+<button class="text-on-surface-variant hover:text-primary transition-colors">—</button>
+<span class="text-label-md font-bold">১</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors">+</button>
+</div>
+<span class="font-bold text-lg">₹৪৫০</span>
+</div>
+</div>
+</div>
+<!-- Mobile Item 2 -->
+<div class="flex space-x-6 pb-6 border-b border-outline-variant/10">
+<div class="w-24 h-32 bg-secondary-container flex-shrink-0 shadow-sm overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Mughal E Rasui" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1yzZRMUk67E-xYYwa_ZbL3Kc6qRwSwmrY97d8fzHwLmbpgQDKiRuebrr6ld8zVQrBUcKNaW7JJyvuvvPyD9-ji0TekhZBmCwoJkDYgxB-YMB7H_dUkHpRvNmLF2yxIMctIS4d3gxPG-wOuR3paTnkE-0vwy7ToYoMU6FRE9NAnzuWj0UsV0HHy_OXHfCMZwAW137dTMT1nCuX9ShBkw2fDu-WWU7h_HEd-rpQ561t_3fs-PDKa-1ho2cp0MtCLycBuk55UvNobO3-"/>
+</div>
+<div class="flex-1">
+<h4 class="text-body-lg font-display-lg text-primary">মুঘল ই রসুই</h4>
+<div class="flex justify-between items-center mt-6">
+<div class="flex items-center space-x-6 border-b border-outline-variant/30 pb-1">
+<button class="text-on-surface-variant hover:text-primary transition-colors">—</button>
+<span class="text-label-md font-bold">১</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors">+</button>
+</div>
+<span class="font-bold text-lg">₹৮৫০</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-10 border-t border-primary/10 mt-10">
+<div class="flex justify-between items-end mb-8">
+<span class="text-[13px] uppercase tracking-widest text-on-surface-variant font-medium">মোট প্রদেয়</span>
+<span class="text-3xl font-display-lg text-primary tracking-tight">₹১৩৫০</span>
+</div>
+<button class="premium-btn w-full py-6 bg-primary text-on-primary font-label-md tracking-[0.2em] uppercase text-[12px] hover:shadow-xl transition-all" onclick="toggleSideCart()">
+                    চেকআউট-এ এগিয়ে যান
+                </button>
+</div>
+</aside>
+</div>
+<!-- Footer -->
+<footer class="bg-white border-t border-outline-variant/20 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16 px-margin-mobile md:px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="text-headline-md font-display-lg text-primary tracking-tight">Boighor</div>
+<p class="text-caption text-on-secondary-container leading-relaxed">© ২০২৪ Boighor. মুদ্রা পাবলিকেশন, কৃষ্ণনগর। সকল স্বত্ব সংরক্ষিত।</p>
+</div>
+<div class="flex flex-col space-y-4">
+<h5 class="text-[11px] uppercase tracking-[0.2em] text-primary font-bold mb-2">সহায়তা</h5>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">শিপিং তথ্য</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">যোগাযোগ করুন</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h5 class="text-[11px] uppercase tracking-[0.2em] text-primary font-bold mb-2">আইনি</h5>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">গোপনীয়তা নীতি</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">নিউজলেটার সাইনআপ</a>
+</div>
+</div>
+</footer>
+<script>
+        function toggleSideCart() {
+            const sideCart = document.getElementById('side-cart');
+            const aside = sideCart.querySelector('aside');
+            
+            if (sideCart.classList.contains('opacity-0')) {
+                sideCart.classList.remove('opacity-0', 'pointer-events-none');
+                aside.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden';
+            } else {
+                sideCart.classList.add('opacity-0', 'pointer-events-none');
+                aside.classList.add('translate-x-full');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Micro-interactions for inputs
+        document.querySelectorAll('input, textarea').forEach(el => {
+            el.addEventListener('focus', () => {
+                const label = el.parentElement.querySelector('label');
+                if (label) {
+                    label.classList.add('text-primary');
+                    label.style.letterSpacing = '0.3em';
+                }
+            });
+            el.addEventListener('blur', () => {
+                const label = el.parentElement.querySelector('label');
+                if (label) {
+                    label.classList.remove('text-primary');
+                    label.style.letterSpacing = '0.2em';
+                }
+            });
+        });
+    </script>
+</body></html>

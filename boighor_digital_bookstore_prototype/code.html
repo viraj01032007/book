@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Boighor | Curating the Soul of Literature</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c4c7c7",
+                        "secondary-container": "#e1dfdb",
+                        "secondary-fixed-dim": "#c8c6c2",
+                        "on-background": "#1c1c16",
+                        "secondary-fixed": "#e4e2dd",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1c1c16",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f2ede4",
+                        "surface-container-highest": "#e6e2d9",
+                        "on-secondary-fixed": "#1b1c19",
+                        "on-surface-variant": "#444748",
+                        "primary-container": "#1c1b1b",
+                        "inverse-primary": "#c8c6c5",
+                        "on-tertiary-fixed": "#191d0e",
+                        "surface-container-high": "#ece8df",
+                        "secondary": "#5e5e5b",
+                        "tertiary": "#000000",
+                        "on-secondary-fixed-variant": "#474744",
+                        "background": "#fdf9f0",
+                        "tertiary-fixed": "#e0e5cc",
+                        "surface-bright": "#fdf9f0",
+                        "outline": "#747878",
+                        "on-tertiary-container": "#818671",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#c4c9b1",
+                        "primary": "#000000",
+                        "surface-container-low": "#f7f3ea",
+                        "tertiary-container": "#191d0e",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#dedad1",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-primary-fixed": "#1c1b1b",
+                        "inverse-on-surface": "#f5f0e7",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#32302a",
+                        "on-tertiary-fixed-variant": "#444937",
+                        "surface-tint": "#5f5e5e",
+                        "primary-fixed": "#e5e2e1",
+                        "surface": "#fdf9f0",
+                        "surface-variant": "#e6e2d9",
+                        "on-secondary-container": "#63635f",
+                        "on-primary-container": "#858383",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#c8c6c5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "stack-md": "24px",
+                        "margin-mobile": "20px",
+                        "gutter": "32px",
+                        "margin-desktop": "64px",
+                        "stack-lg": "48px",
+                        "stack-sm": "12px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "caption": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .book-shadow {
+            box-shadow: 0 10px 30px rgba(26, 26, 26, 0.04);
+        }
+        .book-card:hover {
+            box-shadow: 0 20px 40px rgba(26, 26, 26, 0.08);
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-primary">
+<!-- TopNavBar -->
+<header class="bg-background dark:bg-background border-b border-outline-variant docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-unit max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-3" href="#">
+<img alt="Mudra Publication Logo" class="h-10 w-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMApEiBgMumUtLW49C4kfOfQ0p1t0wFQvx4wNr5XjHwTxXfphVa3qG6DuDxpLA6ttxSTZ_FPdA9oK1Th51ObZFyFdGE5lBIsBSbBS9q7aeafQVd0Wa2wruit64GJLHG5elukjdioVewcyjQ0r6JScYlf9olkkGtldibxzmaeLSaUHY6zwrW32Srj8AHQ7oz1AgN-q8NctHyhG9q8takTSTeV5-mC4f7DSI3lK7J83S6vB7lm9H1l93GLqhc3P-8Why_obBxr_HOY1U"/>
+<span class="text-headline-md font-headline-md font-bold text-primary">Boighor</span>
+</a>
+<nav class="hidden md:flex space-x-8">
+<a class="text-primary border-b-2 border-primary pb-1 font-body-md hover:opacity-80 transition-opacity duration-300" href="#">Catalog</a>
+<a class="text-on-surface-variant hover:text-primary font-body-md hover:opacity-80 transition-opacity duration-300" href="#">Collections</a>
+<a class="text-on-surface-variant hover:text-primary font-body-md hover:opacity-80 transition-opacity duration-300" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:block relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-lg focus:ring-1 focus:ring-primary w-64 text-body-md" placeholder="Search titles..." type="text"/>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="md:hidden text-primary" id="menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- SideNavBar (Mobile / Right-Drawer style) -->
+<aside class="fixed right-0 top-0 h-full w-80 z-[60] bg-surface-bright border-l border-outline-variant translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col p-gutter space-y-stack-md" id="side-nav">
+<div class="flex justify-between items-center mb-8">
+<div class="flex items-center gap-3">
+<img alt="Mudra Publication Icon" class="h-8 w-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMApEiBgMumUtLW49C4kfOfQ0p1t0wFQvx4wNr5XjHwTxXfphVa3qG6DuDxpLA6ttxSTZ_FPdA9oK1Th51ObZFyFdGE5lBIsBSbBS9q7aeafQVd0Wa2wruit64GJLHG5elukjdioVewcyjQ0r6JScYlf9olkkGtldibxzmaeLSaUHY6zwrW32Srj8AHQ7oz1AgN-q8NctHyhG9q8takTSTeV5-mC4f7DSI3lK7J83S6vB7lm9H1l93GLqhc3P-8Why_obBxr_HOY1U"/>
+<div>
+<h2 class="text-headline-md font-headline-md text-primary">Boighor</h2>
+<p class="text-caption font-caption text-on-surface-variant">The Digital Atelier</p>
+</div>
+</div>
+<button class="text-primary" id="close-nav">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="flex items-center gap-4 p-4 bg-primary-container text-on-primary-container font-bold rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="book_2">book_2</span>
+<span class="font-label-md text-label-md">Catalog</span>
+</a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-label-md text-label-md">Collections</span>
+</a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-label-md text-label-md">My Cart</span>
+</a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+<span class="font-label-md text-label-md">About</span>
+</a>
+</nav>
+<div class="mt-auto">
+<button class="w-full py-4 bg-primary text-on-primary rounded-lg font-bold hover:opacity-90 transition-opacity">Checkout Now</button>
+</div>
+</aside>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-stack-lg md:pt-32 pb-stack-lg md:pb-48">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="z-10">
+<span class="inline-block mb-6 px-4 py-1 rounded-full border border-outline font-label-md text-label-md text-secondary">EST. 2024 • MUDRA PUBLICATION</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-6 leading-tight">Curating the Soul of <br/><span class="italic font-normal">Literature</span></h1>
+<p class="text-body-lg text-secondary mb-10 max-w-md">Discover a handpicked selection of exquisite literature, from historical epics to contemporary masterpieces. Designed for the scholarly mind.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="px-10 py-4 bg-primary text-on-primary font-bold transition-all hover:translate-y-[-2px] hover:shadow-lg">Explore the Collection</button>
+<button class="px-10 py-4 border border-primary text-primary font-bold hover:bg-surface-container-low transition-all underline decoration-1 underline-offset-4 font-headline-md italic">View Catalog</button>
+</div>
+</div>
+<div class="relative hidden md:block">
+<!-- Aesthetic Stacked Books Background -->
+<div class="absolute -right-20 -top-20 w-[120%] aspect-square opacity-20 pointer-events-none">
+
+</div>
+<div class="relative z-10 flex justify-end">
+<div class="w-80 h-[480px] bg-surface-container-highest book-shadow rotate-3 translate-y-8 absolute right-16 top-0"></div>
+<img class="w-80 h-[480px] object-cover book-shadow relative z-20 transition-transform duration-700 hover:-translate-y-4" data-alt="A sophisticated editorial shot of an open vintage book lying on a heavy linen tablecloth. The lighting is golden and warm, casting long atmospheric shadows. Several dried flowers and an antique fountain pen are placed carefully beside it, reinforcing the theme of scholarship and the tactile joy of reading. The overall mood is peaceful and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKvCpPgVRArIOmKjC75zeVGSRBPZWp9gRPaaBI785p6Q54MqfkyAfQU2JTZv3vl8RrQSzaY2nxlbWl64Gc4DKqZiPfR88dtID52e74yymFFy_BbwQUGlwTZUtqfDiHt_fpX8gzn_5BtZs0G_qZe_4YYerCAvJPDzwWMKEn91egxsoOapdBOlpF2qK217mnHpo13Cd_GzP57aM7hJ1y9ih5dxJ8C7xYpFoyNPtwk9yT3WRS2yP25k-Dw_f7ZeAYD9XFPpaxP_qPQlvG"/>
+</div>
+</div>
+</div>
+</section>
+<!-- New Arrivals Bento Grid -->
+<section class="bg-surface-container-low py-stack-lg md:py-32">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">New Arrivals</h2>
+<p class="text-on-surface-variant font-body-md">The latest additions to our curated shelves.</p>
+</div>
+<a class="hidden md:flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
+<span>View All</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<!-- Book Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[2/3] overflow-hidden mb-6 transition-all duration-500 book-card rounded-sm bg-white">
+<img alt="Maharaja Krishnachandra o Samakal Book Cover" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAp9ZwoV-VmJAoOiUQx9QYnIq3YZgFnArbmPrPQRnRkfz-QYWqkPMUlwFdnaJE3lonR9PEA4o8YAR26mpC7NGOCp3yqneg2EG1ZcJCpAQg2f4Xvmym8-3kNWtP958jFTjuS1cFT5GHHHXi4tOed-Dfqk6LgqF5_uzy30mAAb7-qoE72x795na5njqlNyFJ92lDs4sZQwQk0JYcPZuqX7Ub0TlpNc0ACgtydoc5LKx3yQ6d64T0yO7AxEwiSxJ7cHZZM_z7tgWzVYes"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors mb-1 truncate">Maharaja Krishnachandra</h3>
+<p class="text-caption font-caption text-on-surface-variant uppercase tracking-widest">History • Mudra</p>
+</div>
+<!-- Book Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[2/3] overflow-hidden mb-6 transition-all duration-500 book-card rounded-sm bg-white">
+<img alt="Noder Dol Book Cover" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuYHAkPkQzDB8fnrCyvS7mhyHxMVfHsL37XCCFp5Gp1KQzXmNkYtaGT148_GJB3NmYIuZzaa-30OzwQAxvGt_aDQNsFtsFMy6LtMag2-VpwGavL4FP8MLIqY-b-c0vcFkMqa_pzuWRrUBXf5aKUFvwVBSJ-p3WT2p3hcit9fBnT4tkjGIDUyXujvbUrrZtk3AXVs29kRkpvxEJvrBwVuMEMTSPhRjqcOo9QFQTKODVcuiPsV0S9p07VkeY4djLlt4kdK47wcJiwH6k"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors mb-1 truncate">Noder Dol</h3>
+<p class="text-caption font-caption text-on-surface-variant uppercase tracking-widest">Drama • Debasish</p>
+</div>
+<!-- Book Card 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[2/3] overflow-hidden mb-6 transition-all duration-500 book-card rounded-sm bg-white">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500" data-alt="A book cover design for a mystery novel titled 'Shadows of the Ghats'. The design features a minimalist illustration of a lone boat on a misty river in deep charcoal and indigo tones. Subtle highlights of metallic gold foil represent the moonlight reflecting on the water. The typography is elegant and serif, placed at the top center." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhOalyBOUl0-OuLQn9ogAZQC7uvIs-LDzEeUTEq0KRmCVyaJLCm-qpLtGVGNmCqOTIaHua_2eVovxjQjA0xAyqzNNCDrTf-FgzVVKFjUXc9p8xSr8LUrpdsaDmXMuY_965FIxnSod7GmU06qYLFZKZnEx1CEShzwpyiV8D6l_JDN6hlEM50YEGkPm-iwJFjDE3PD4qCe94skT2lPF9NohGThrKi0ep7933KLhiRgtdhsEt7-BupSI-_7oyk-6lK_Zm7fy1Vv6tlRY6"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors mb-1 truncate">Shadows of the Ghats</h3>
+<p class="text-caption font-caption text-on-surface-variant uppercase tracking-widest">Mystery • Fiction</p>
+</div>
+<!-- Book Card 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-[2/3] overflow-hidden mb-6 transition-all duration-500 book-card rounded-sm bg-white">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500" data-alt="A clean, modern book cover for a collection of essays titled 'The Digital Atelier'. The background is a warm bone white with a single, highly detailed feather quill resting horizontally. The title is set in a bold, black serif font with ample letter spacing. The aesthetic is extremely minimalist and high-end editorial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFJyVHmu5Hn89-hpctWEXljVjnLG3D3ZACwx9UwjGZi4Zd3YQHLLxhn06QwrlxYpwqww4uhtWPDBsPn-q1YEserfXHUv-XmD1YRBoOoRa2rlnJ1wtVPDS76Z_8XE8iONeuriarCPyx6qw1vDmDZoMCt_9eX91ez1SFDmo9GimVzN54_4fTDgGBpvosnkSJEdz_aPvqKT7g4NmqLGGsMqicGbC3TAGx9T2lSOECYnd70xDMmGL9WtydoVjCGw_r_njqe5AzLMdHxKmR"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors mb-1 truncate">The Digital Atelier</h3>
+<p class="text-caption font-caption text-on-surface-variant uppercase tracking-widest">Essays • Contemporary</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Author Spotlight Section -->
+<section class="py-stack-lg md:py-32">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5 order-2 lg:order-1">
+<span class="text-label-md font-label-md text-on-surface-variant mb-4 block">AUTHOR SPOTLIGHT</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Kunthak Chattopadhyay</h2>
+<div class="w-16 h-1 bg-primary mb-8"></div>
+<p class="text-body-lg text-secondary mb-8 italic leading-relaxed">
+                            "Literature is the only place where you can find yourself by losing yourself in someone else's story. Through 'Mughal E Rasui', I wanted to capture the sensory heritage of a bygone era."
+                        </p>
+<p class="text-body-md text-on-surface-variant mb-10">
+                            A historian by training and a storyteller by heart, Kunthak Chattopadhyay explores the intricate intersections of culinary arts and imperial history. His latest work has been hailed as a triumph of narrative research.
+                        </p>
+<div class="flex items-center gap-12">
+<div>
+<p class="text-headline-md font-headline-md text-primary">12+</p>
+<p class="text-caption font-caption text-on-surface-variant uppercase">Publications</p>
+</div>
+<div>
+<p class="text-headline-md font-headline-md text-primary">4</p>
+<p class="text-caption font-caption text-on-surface-variant uppercase">Awards</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2 flex flex-col md:flex-row gap-gutter">
+<div class="flex-1">
+<img class="w-full aspect-[4/5] object-cover book-shadow" data-alt="A portrait of a sophisticated Indian author in his 40s, Kunthak Chattopadhyay. He is sitting in a sunlit private library filled with floor-to-ceiling wooden bookshelves. He is wearing a simple black turtleneck and glasses, looking thoughtfully off-camera. The lighting is soft and natural, emphasizing a scholarly and contemplative atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUXGHm0550dQdps7uERSZGaElo-Qg18AvLFx81Fm3gZK9YIogF7ojQvyRAtBETFIPOiVM-0UR87wyni-7ooUyYa1mFsIErrJRqvH1ujfTzjLXsOhKECl7C_NCveJq2S6DO4gD-zdQzQTExa5zeopZjdrNokJpe7hkFhOBwSQxAa7rKBk9WHQaHVRLUq14Qek4MJj1FWeboN79vbZdnoDcIB1cGu76H36MHjAo2baqrMeLeIDousAbpfdsuO-VtdITyONwSli5iskAb"/>
+</div>
+<div class="flex-1 md:mt-24">
+<div class="group relative">
+<img alt="Mughal E Rasui Book Cover" class="w-full aspect-[2/3] object-cover book-shadow transition-transform duration-500 hover:-translate-y-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnqRygGaLF9B6SZbAW1Hcyv9_sKwVAq1HHhVRQC1FKRRRcyOWJN9qccb2iwiew2zqVwWY2elFP-MBb0_A7G43g52RqZJF7dAC58g3kIMNQQi9V4DttPtUeoicSp76bzQNAPCVRXOixNXEoCQimGpSDDtrlri1-EWtaXInROKzFjcr7IN0sMhQGxtb3zj1bfOR1NLzcAIE9kVHRWlu_VETBbC8fKsH-Wr2ozji9G_eXQWAlmk9_as0wOLW4R3T-4KZFoUax_TjA7EVv"/>
+<div class="mt-6">
+<p class="text-label-md font-label-md text-on-surface-variant mb-1">FEATURED WORK</p>
+<h4 class="font-headline-md text-headline-md text-primary">Mughal E Rasui</h4>
+<button class="mt-4 text-primary font-bold border-b border-primary pb-1 hover:opacity-70 transition-all">Explore Work</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Aesthetic Banner -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-stack-lg">
+<div class="bg-primary text-on-primary py-24 px-12 md:px-24 flex flex-col items-center text-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+
+</div>
+<div class="relative z-10 max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg mb-6">Stay Curated</h2>
+<p class="text-body-lg text-on-primary-container mb-10 opacity-80">Join our exclusive newsletter for literary insights, upcoming releases, and behind-the-scenes stories from the atelier.</p>
+<form class="flex flex-col sm:flex-row gap-4 w-full">
+<input class="flex-1 bg-white/10 border border-white/20 px-6 py-4 text-on-primary placeholder:text-white/40 focus:ring-1 focus:ring-white outline-none" placeholder="Email address" type="email"/>
+<button class="bg-white text-primary px-10 py-4 font-bold hover:bg-surface-container-highest transition-colors" type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant full-width">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="space-y-4">
+<div class="flex items-center gap-3 mb-6">
+<img alt="Mudra Publication Logo" class="h-8 w-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMApEiBgMumUtLW49C4kfOfQ0p1t0wFQvx4wNr5XjHwTxXfphVa3qG6DuDxpLA6ttxSTZ_FPdA9oK1Th51ObZFyFdGE5lBIsBSbBS9q7aeafQVd0Wa2wruit64GJLHG5elukjdioVewcyjQ0r6JScYlf9olkkGtldibxzmaeLSaUHY6zwrW32Srj8AHQ7oz1AgN-q8NctHyhG9q8takTSTeV5-mC4f7DSI3lK7J83S6vB7lm9H1l93GLqhc3P-8Why_obBxr_HOY1U"/>
+<span class="text-headline-sm font-headline-md text-primary">Boighor</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">The digital atelier for literature, history, and the arts. Part of Mudra Publication's commitment to quality storytelling.</p>
+<div class="flex gap-4 pt-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">history_edu</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div class="md:pl-12">
+<h4 class="font-headline-md text-headline-md text-primary mb-6">Explore</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md font-body-md" href="#">New Arrivals</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md font-body-md" href="#">Author Spotlights</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md font-body-md" href="#">Our Story</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md font-body-md" href="#">Curated Lists</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary mb-6">Support</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md font-body-md" href="#">Shipping Info</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md font-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md font-body-md" href="#">Contact Us</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md font-body-md" href="#">Newsletter Signup</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-caption font-caption text-secondary">© 2024 Boighor. Mudra Publication, Krishnagar. All rights reserved.</p>
+<div class="flex gap-8">
+<span class="text-caption font-caption text-on-surface-variant">Terms of Service</span>
+<span class="text-caption font-caption text-on-surface-variant">Accessibility</span>
+</div>
+</div>
+</footer>
+<!-- FAB -->
+<button class="fixed bottom-8 right-8 w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform z-40">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+<script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeNav = document.getElementById('close-nav');
+        const sideNav = document.getElementById('side-nav');
+
+        menuToggle.addEventListener('click', () => {
+            sideNav.classList.remove('translate-x-full');
+        });
+
+        closeNav.addEventListener('click', () => {
+            sideNav.classList.add('translate-x-full');
+        });
+
+        // Simple parallax or movement for book cards on scroll
+        window.addEventListener('scroll', () => {
+            const cards = document.querySelectorAll('.book-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    const shift = (rect.top - window.innerHeight / 2) * 0.02;
+                    card.style.transform = `translateY(${shift}px)`;
+                }
+            });
+        });
+    </script>
+</body></html>

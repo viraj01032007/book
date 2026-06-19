@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="light" lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>বইঘর অ্যাডমিন | মুদ্রা পাবলিকেশন</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c4c7c7",
+                    "secondary-container": "#e1dfdb",
+                    "secondary-fixed-dim": "#c8c6c2",
+                    "on-background": "#1c1c16",
+                    "secondary-fixed": "#e4e2dd",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1c1c16",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#f2ede4",
+                    "surface-container-highest": "#e6e2d9",
+                    "on-secondary-fixed": "#1b1c19",
+                    "on-surface-variant": "#444748",
+                    "primary-container": "#1c1b1b",
+                    "inverse-primary": "#c8c6c5",
+                    "on-tertiary-fixed": "#191d0e",
+                    "surface-container-high": "#ece8df",
+                    "secondary": "#5e5e5b",
+                    "tertiary": "#000000",
+                    "on-secondary-fixed-variant": "#474744",
+                    "background": "#fdf9f0",
+                    "tertiary-fixed": "#e0e5cc",
+                    "surface-bright": "#fdf9f0",
+                    "outline": "#747878",
+                    "on-tertiary-container": "#818671",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#c4c9b1",
+                    "primary": "#000000",
+                    "surface-container-low": "#f7f3ea",
+                    "tertiary-container": "#191d0e",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dedad1",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-primary-fixed": "#1c1b1b",
+                    "inverse-on-surface": "#f5f0e7",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#32302a",
+                    "on-tertiary-fixed-variant": "#444937",
+                    "surface-tint": "#5f5e5e",
+                    "primary-fixed": "#e5e2e1",
+                    "surface": "#fdf9f0",
+                    "surface-variant": "#e6e2d9",
+                    "on-secondary-container": "#63635f",
+                    "on-primary-container": "#858383",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#c8c6c5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "container-max": "1280px",
+                    "stack-md": "24px",
+                    "margin-mobile": "20px",
+                    "gutter": "32px",
+                    "margin-desktop": "64px",
+                    "stack-lg": "48px",
+                    "stack-sm": "12px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Playfair Display", "Noto Sans Bengali"],
+                    "headline-lg-mobile": ["Playfair Display", "Noto Sans Bengali"],
+                    "label-md": ["Inter", "Noto Sans Bengali"],
+                    "headline-lg": ["Playfair Display", "Noto Sans Bengali"],
+                    "display-lg": ["Playfair Display", "Noto Sans Bengali"],
+                    "caption": ["Inter", "Noto Sans Bengali"],
+                    "body-md": ["Inter", "Noto Sans Bengali"],
+                    "body-lg": ["Inter", "Noto Sans Bengali"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .order-row:hover {
+            background-color: #fcfbf7;
+            transition: background-color 0.2s ease;
+        }
+        .transition-soft {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        body {
+            font-family: 'Noto Sans Bengali', 'Inter', sans-serif;
+        }
+        .glass-panel {
+            background: rgba(253, 249, 240, 0.7);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(196, 199, 199, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen selection:bg-secondary-container">
+<!-- TopNavBar -->
+<header class="bg-background/80 backdrop-blur-md border-b border-outline-variant sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-unit max-w-container-max mx-auto">
+<div class="flex items-center gap-stack-md">
+<span class="text-headline-md font-headline-md font-bold text-primary tracking-tight">Boighor</span>
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface-variant hover:text-primary transition-opacity duration-300 font-body-md text-body-md" href="#">ক্যাটালগ</a>
+<a class="text-on-surface-variant hover:text-primary transition-opacity duration-300 font-body-md text-body-md" href="#">সংগ্রহ</a>
+<a class="text-on-surface-variant hover:text-primary transition-opacity duration-300 font-body-md text-body-md" href="#">আমাদের সম্পর্কে</a>
+</nav>
+</div>
+<div class="flex items-center gap-stack-md">
+<!-- User/Admin Toggle -->
+<div class="flex bg-surface-container rounded-full p-1 border border-outline-variant items-center">
+<button class="px-4 py-1.5 rounded-full text-label-md font-label-md transition-soft bg-transparent text-on-surface-variant hover:opacity-80" id="userViewBtn" onclick="setMode('user')">
+                    ইউজার
+                </button>
+<button class="px-4 py-1.5 rounded-full text-label-md font-label-md transition-soft bg-primary text-on-primary shadow-sm" id="adminViewBtn" onclick="setMode('admin')">
+                    অ্যাডমিন
+                </button>
+</div>
+<button class="material-symbols-outlined text-primary p-2 hover:bg-surface-container rounded-full transition-soft">shopping_cart</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Admin Avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGH1w85Zmm1AkIZIVY-nHo7JFo47GgqSpuFhB1MxKkNWDROxoCZE1K7mqfIWJr5oh2CZ6eMHmJjT7G6tueXWo0V7qdKYR6iugy5undbBXWWR2w6hR-0YOypFZpRFyX-qDwtezZ_V0oNaeT6RD-LTFETvkemywx2BpeSWP_4e5V6QeP8CJXq1vbRyFbH1OkGBTALQMon9NWbNBiyDNjSPSt-fgAmKN0DMZDX7lCXAqHmOsmZ-SYCoVavTrQiExh_wlCS6ZppNc-_vgc"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-desktop py-stack-lg">
+<!-- Dashboard Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-stack-md mb-stack-lg">
+<div>
+<h1 class="text-headline-lg font-headline-lg text-primary mb-2">অর্ডার ম্যানেজমেন্ট</h1>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-2xl">আপনার অমূল্য রত্নগুলি পরিচালনা করুন। একজন দক্ষ লাইব্রেরিয়ান মতো নির্ভুলভাবে অর্ডারগুলি পর্যালোচনা, যাচাই এবং সম্পন্ন করুন।</p>
+</div>
+<div class="flex gap-stack-sm">
+<button class="flex items-center gap-2 px-6 py-2.5 bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:shadow-lg transition-all">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                এক্সপোর্ট করুন (CSV)
+            </button>
+</div>
+</div>
+<!-- Order Statistics / Bento Overview -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-stack-lg">
+<div class="bg-surface-bright border border-outline-variant p-gutter rounded-xl shadow-[0_2px_8px_-2px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-start mb-stack-md">
+<span class="material-symbols-outlined text-on-surface-variant bg-surface-container p-3 rounded-lg">shopping_bag</span>
+<span class="text-label-md font-label-md text-primary">+১২% গত সপ্তাহের তুলনায়</span>
+</div>
+<div class="text-display-lg font-display-lg text-primary">১২৪</div>
+<div class="text-label-md font-label-md text-on-surface-variant uppercase tracking-widest mt-1">মোট সক্রিয় অর্ডার</div>
+</div>
+<div class="bg-surface-bright border border-outline-variant p-gutter rounded-xl shadow-[0_2px_8px_-2px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-start mb-stack-md">
+<span class="material-symbols-outlined text-on-surface-variant bg-surface-container p-3 rounded-lg">payments</span>
+<span class="text-label-md font-label-md text-primary">যাচাইকৃত</span>
+</div>
+<div class="text-display-lg font-display-lg text-primary">₹৪২,৮৫০</div>
+<div class="text-label-md font-label-md text-on-surface-variant uppercase tracking-widest mt-1">মাসিক আয়</div>
+</div>
+<div class="bg-surface-bright border border-outline-variant p-gutter rounded-xl shadow-[0_2px_8px_-2px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-start mb-stack-md">
+<span class="material-symbols-outlined text-on-surface-variant bg-surface-container p-3 rounded-lg">pending_actions</span>
+<span class="text-label-md font-label-md text-error">পদক্ষেপ প্রয়োজন</span>
+</div>
+<div class="text-display-lg font-display-lg text-primary">৮</div>
+<div class="text-label-md font-label-md text-on-surface-variant uppercase tracking-widest mt-1">যাচাইকরণের অপেক্ষায়</div>
+</div>
+</div>
+<!-- Orders Table Section -->
+<div class="bg-surface-bright border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+<div class="px-gutter py-stack-md border-b border-outline-variant flex flex-col md:flex-row md:items-center justify-between gap-stack-md">
+<div class="relative w-full md:w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 bg-surface-container-low border border-outline rounded-lg text-body-md font-body-md focus:ring-1 focus:ring-primary/20 focus:border-primary transition-soft outline-none" placeholder="অর্ডার আইডি, নাম, বা বই খুঁজুন..." type="text"/>
+</div>
+<div class="flex items-center gap-stack-sm">
+<button class="p-2 hover:bg-surface-container rounded-lg transition-soft border border-outline-variant text-on-surface-variant flex items-center gap-2 px-4">
+<span class="material-symbols-outlined">filter_list</span>
+<span class="text-label-md font-label-md">ফিল্টার</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface-container-low/50">
+<tr>
+<th class="px-gutter py-4 text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">অর্ডার আইডি</th>
+<th class="px-gutter py-4 text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">গ্রাহকের নাম</th>
+<th class="px-gutter py-4 text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">ফোন নম্বর</th>
+<th class="px-gutter py-4 text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">অর্ডার করা বই</th>
+<th class="px-gutter py-4 text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">মোট</th>
+<th class="px-gutter py-4 text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">অবস্থা</th>
+<th class="px-gutter py-4 text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">অ্যাকশন</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<!-- Row 1 -->
+<tr class="order-row transition-soft bg-white">
+<td class="px-gutter py-5 text-body-md font-body-md text-primary font-medium">#ORD-4921</td>
+<td class="px-gutter py-5 text-body-md font-body-md">অরিজিৎ চ্যাটার্জি</td>
+<td class="px-gutter py-5 text-body-md font-body-md">+৯১ ৯৮৭৬ ৫৪৩২১০</td>
+<td class="px-gutter py-5 text-body-md font-body-md italic font-headline-md">নদের দল</td>
+<td class="px-gutter py-5 text-body-md font-body-md font-semibold">₹১,২৫০</td>
+<td class="px-gutter py-5">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full text-[11px] font-semibold uppercase tracking-wider">যাচাইকৃত</span>
+</td>
+<td class="px-gutter py-5">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-soft p-1">more_vert</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="order-row transition-soft bg-white">
+<td class="px-gutter py-5 text-body-md font-body-md text-primary font-medium">#ORD-4922</td>
+<td class="px-gutter py-5 text-body-md font-body-md">মৌসুমী রায়</td>
+<td class="px-gutter py-5 text-body-md font-body-md">+৯১ ৯১২৩ ৪৫৬৭৮৯</td>
+<td class="px-gutter py-5 text-body-md font-body-md italic font-headline-md">বনলতা সেন, সঞ্চয়িতা</td>
+<td class="px-gutter py-5 text-body-md font-body-md font-semibold">₹২,১০০</td>
+<td class="px-gutter py-5">
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant rounded-full text-[11px] font-semibold uppercase tracking-wider">অপেক্ষমাণ</span>
+</td>
+<td class="px-gutter py-5">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-soft p-1">more_vert</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="order-row transition-soft bg-white">
+<td class="px-gutter py-5 text-body-md font-body-md text-primary font-medium">#ORD-4923</td>
+<td class="px-gutter py-5 text-body-md font-body-md">ইমরান হোসেন</td>
+<td class="px-gutter py-5 text-body-md font-body-md">+৯১ ৮০১৬ ৭৬৫৪৩২</td>
+<td class="px-gutter py-5 text-body-md font-body-md italic font-headline-md">পথের পাঁচালী</td>
+<td class="px-gutter py-5 text-body-md font-body-md font-semibold">₹৪৫০</td>
+<td class="px-gutter py-5">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full text-[11px] font-semibold uppercase tracking-wider">যাচাইকৃত</span>
+</td>
+<td class="px-gutter py-5">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-soft p-1">more_vert</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="order-row transition-soft bg-white">
+<td class="px-gutter py-5 text-body-md font-body-md text-primary font-medium">#ORD-4924</td>
+<td class="px-gutter py-5 text-body-md font-body-md">তানিয়া আহমেদ</td>
+<td class="px-gutter py-5 text-body-md font-body-md">+৯১ ৭০৪৫ ৩২২১১০</td>
+<td class="px-gutter py-5 text-body-md font-body-md italic font-headline-md">চোখের বালি</td>
+<td class="px-gutter py-5 text-body-md font-body-md font-semibold">₹৮৯০</td>
+<td class="px-gutter py-5">
+<span class="px-3 py-1 bg-error-container text-on-error-container rounded-full text-[11px] font-semibold uppercase tracking-wider">বাতিল</span>
+</td>
+<td class="px-gutter py-5">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-soft p-1">more_vert</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-gutter py-4 bg-surface-container-low border-t border-outline-variant flex items-center justify-between">
+<span class="text-caption font-caption text-on-surface-variant">৪৮টির মধ্যে ৪টি অর্ডার প্রদর্শিত হচ্ছে</span>
+<div class="flex gap-2">
+<button class="p-2 border border-outline-variant rounded hover:bg-surface-container transition-soft disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-2 border border-outline-variant rounded hover:bg-surface-container transition-soft">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="space-y-4">
+<span class="text-headline-md font-headline-md text-primary">Boighor</span>
+<p class="text-caption font-caption text-on-surface-variant max-w-xs leading-relaxed">ডিজিটাল যুগের জন্য সেরা বাংলা সাহিত্যের কিউরেশন। মুদ্রা পাবলিকেশনের একটি বিশেষ উদ্যোগ।</p>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-body-md font-body-md" href="#">গোপনীয়তা নীতি</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-body-md font-body-md" href="#">শিপিং তথ্য</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-body-md font-body-md" href="#">যোগাযোগ করুন</a>
+</div>
+<div class="flex flex-col gap-2">
+<p class="text-body-md font-body-md font-semibold text-primary mb-2">নিউজলেটার</p>
+<div class="flex gap-2">
+<input class="flex-1 bg-surface-bright border border-outline rounded-lg px-4 py-2 outline-none focus:border-primary transition-soft" placeholder="ইমেল আইডি" type="email"/>
+<button class="px-6 py-2 bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-opacity-90 transition-all">যুক্ত হন</button>
+</div>
+<p class="text-caption font-caption mt-6 text-on-surface-variant opacity-70">© ২০২৪ বইঘর। মুদ্রা পাবলিকেশন, কৃষ্ণনগর। সর্বস্বত্ব সংরক্ষিত।</p>
+</div>
+</div>
+</footer>
+<script>
+    function setMode(mode) {
+        const userBtn = document.getElementById('userViewBtn');
+        const adminBtn = document.getElementById('adminViewBtn');
+        
+        if (mode === 'user') {
+            userBtn.classList.remove('bg-transparent', 'text-on-surface-variant');
+            userBtn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+            
+            adminBtn.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+            adminBtn.classList.add('bg-transparent', 'text-on-surface-variant');
+        } else {
+            adminBtn.classList.remove('bg-transparent', 'text-on-surface-variant');
+            adminBtn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+            
+            userBtn.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+            userBtn.classList.add('bg-transparent', 'text-on-surface-variant');
+        }
+    }
+
+    // Search highlight interaction
+    const searchInput = document.querySelector('input[type="text"]');
+    searchInput.addEventListener('focus', () => {
+        searchInput.parentElement.classList.add('scale-[1.005]');
+    });
+    searchInput.addEventListener('blur', () => {
+        searchInput.parentElement.classList.remove('scale-[1.005]');
+    });
+</script>
+</body></html>

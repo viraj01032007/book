@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout | Boighor - The Digital Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c4c7c7",
+                    "secondary-container": "#e1dfdb",
+                    "secondary-fixed-dim": "#c8c6c2",
+                    "on-background": "#1c1c16",
+                    "secondary-fixed": "#e4e2dd",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1c1c16",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#f2ede4",
+                    "surface-container-highest": "#e6e2d9",
+                    "on-secondary-fixed": "#1b1c19",
+                    "on-surface-variant": "#444748",
+                    "primary-container": "#1c1b1b",
+                    "inverse-primary": "#c8c6c5",
+                    "on-tertiary-fixed": "#191d0e",
+                    "surface-container-high": "#ece8df",
+                    "secondary": "#5e5e5b",
+                    "tertiary": "#000000",
+                    "on-secondary-fixed-variant": "#474744",
+                    "background": "#fdf9f0",
+                    "tertiary-fixed": "#e0e5cc",
+                    "surface-bright": "#fdf9f0",
+                    "outline": "#747878",
+                    "on-tertiary-container": "#818671",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#c4c9b1",
+                    "primary": "#000000",
+                    "surface-container-low": "#f7f3ea",
+                    "tertiary-container": "#191d0e",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dedad1",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-primary-fixed": "#1c1b1b",
+                    "inverse-on-surface": "#f5f0e7",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#32302a",
+                    "on-tertiary-fixed-variant": "#444937",
+                    "surface-tint": "#5f5e5e",
+                    "primary-fixed": "#e5e2e1",
+                    "surface": "#fdf9f0",
+                    "surface-variant": "#e6e2d9",
+                    "on-secondary-container": "#63635f",
+                    "on-primary-container": "#858383",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#c8c6c5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "container-max": "1280px",
+                    "stack-md": "24px",
+                    "margin-mobile": "20px",
+                    "gutter": "32px",
+                    "margin-desktop": "64px",
+                    "stack-lg": "48px",
+                    "stack-sm": "12px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "caption": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fdf9f0;
+            color: #1c1c16;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .luxury-shadow {
+            box-shadow: 0 10px 30px rgba(26, 26, 26, 0.04);
+        }
+        .input-underline {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid #747878;
+            background: transparent;
+            border-radius: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .input-underline:focus {
+            outline: none;
+            box-shadow: none;
+            border-bottom: 2px solid #000000;
+            border-color: #000000;
+        }
+        .side-cart-overlay {
+            backdrop-filter: blur(4px);
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-body-md bg-background min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-background border-b border-outline-variant sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-bold text-primary">Boighor</div>
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="text-on-surface-variant hover:text-primary transition-opacity duration-300 font-body-md" href="#">Catalog</a>
+<a class="text-on-surface-variant hover:text-primary transition-opacity duration-300 font-body-md" href="#">Collections</a>
+<a class="text-on-surface-variant hover:text-primary transition-opacity duration-300 font-body-md" href="#">About</a>
+</div>
+<div class="flex items-center space-x-stack-md">
+<button class="relative text-primary hover:opacity-80 transition-opacity" onclick="toggleSideCart()">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute -top-2 -right-2 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">2</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A minimalist logo for Mudra Publication, featuring an abstract book icon or elegant serif 'M' in deep charcoal against a warm bone paper-like background, evoking a scholarly yet modern publishing house aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDELjkVIn7_2z4MG-6rRo1txHbeWMsRCXU-KYtqn6RGNzwusPh9lefWhQP_6Fv-36JTafuiXXHTDI8ZBbpzzKNrV3e6c-d8D3s-RGqVaPqT1_Hu6xFJR5XcGxxMEK1mzOqnRAAujnx60CgWPsfaCZgdBXMSFIJBZ51qd1OyYmZ-3Pj_0hkw0ytWq8GDI6CdcPiEqxa8KPBYzkbm6D4QYhYUalduWpwpow7Er09pGPxHlFridssfAeIV9pV8aZau6juWILPl1gonsk-g"/>
+</div>
+</div>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Side: Checkout Form -->
+<div class="lg:col-span-7 space-y-stack-lg">
+<section>
+<h1 class="text-display-lg font-display-lg mb-stack-md">Shipping Information</h1>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="space-y-unit">
+<label class="text-label-md font-label-md block">Full Name</label>
+<input class="w-full input-underline text-body-md py-2" placeholder="Enter your full name" type="text"/>
+</div>
+<div class="space-y-unit">
+<label class="text-label-md font-label-md block">Phone Number</label>
+<input class="w-full input-underline text-body-md py-2" placeholder="+91" type="tel"/>
+</div>
+<div class="md:col-span-2 space-y-unit">
+<label class="text-label-md font-label-md block">Delivery Address</label>
+<textarea class="w-full input-underline text-body-md py-2 resize-none" placeholder="Full street address, landmark, and city" rows="2"></textarea>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-headline-md font-headline-md mb-stack-md">Shipping Method</h2>
+<div class="space-y-stack-sm">
+<label class="flex items-center justify-between p-stack-md border border-outline-variant bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors rounded-lg group">
+<div class="flex items-center space-x-stack-md">
+<input checked="" class="text-primary focus:ring-primary w-4 h-4" name="shipping" type="radio"/>
+<div>
+<span class="block text-body-lg font-semibold">Standard Courier</span>
+<span class="text-caption text-on-surface-variant italic">3-5 business days</span>
+</div>
+</div>
+<span class="font-semibold">₹50</span>
+</label>
+<label class="flex items-center justify-between p-stack-md border border-outline-variant cursor-pointer hover:bg-surface-container transition-colors rounded-lg group">
+<div class="flex items-center space-x-stack-md">
+<input class="text-primary focus:ring-primary w-4 h-4" name="shipping" type="radio"/>
+<div>
+<span class="block text-body-lg font-semibold">Express Delivery</span>
+<span class="text-caption text-on-surface-variant italic">Next day delivery</span>
+</div>
+</div>
+<span class="font-semibold">₹150</span>
+</label>
+</div>
+</section>
+<section>
+<h2 class="text-headline-md font-headline-md mb-stack-md">Payment Method</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<button class="flex items-center justify-center space-x-stack-sm p-stack-md border border-primary bg-primary text-white hover:opacity-90 transition-all rounded-lg">
+<span class="material-symbols-outlined">payments</span>
+<span class="text-label-md font-label-md">Pay with UPI</span>
+</button>
+<button class="flex items-center justify-center space-x-stack-sm p-stack-md border border-outline hover:bg-surface-container-highest transition-all rounded-lg">
+<span class="material-symbols-outlined">credit_card</span>
+<span class="text-label-md font-label-md">Cards / Netbanking</span>
+</button>
+</div>
+</section>
+<div class="pt-stack-md">
+<button class="w-full py-stack-md bg-primary text-on-primary text-headline-md font-headline-md hover:scale-[1.01] transition-transform duration-200">
+                        Complete Order
+                    </button>
+<p class="text-center text-caption text-on-surface-variant mt-stack-sm">By clicking, you agree to our Terms of Sale and Privacy Policy.</p>
+</div>
+</div>
+<!-- Right Side: Order Summary (Desktop view) -->
+<div class="hidden lg:block lg:col-span-5 sticky top-32">
+<div class="bg-surface-container p-gutter rounded-xl luxury-shadow border border-outline-variant">
+<h2 class="text-headline-md font-headline-md border-b border-outline-variant pb-stack-md mb-stack-md">Order Summary</h2>
+<div class="space-y-gutter mb-stack-lg">
+<!-- Book Item 1 -->
+<div class="flex space-x-stack-md">
+<div class="w-20 h-28 bg-secondary-container flex-shrink-0 luxury-shadow overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A scholarly book cover for 'Maharaja Krishnachandra o Samakal' featuring intricate historical Bengali motifs, muted earth tones, and elegant serif typography on a textured vellum-like paper background. The lighting is soft and ambient, emphasizing its archival literary quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGg_qbAuzqmn33GUCMZ-iL13ix76IeSolO9wt7xnn959y3W6BJqEAi78WoWsjvy9o3kduKOv04kEBqiywOJo0rMn3DAfqBLBwBa9nQb9CxBzj8EXThWU8kkMZ2TfuZoNh3fhPFXEWJy7BNBPuPCREUJJHPo7Z-Zq8gqYzjhmk-Ei2mdMUQK1cRU2bdeh0WkP17XNkvkr_qOWal6jLtix9pc2L73rCyBr-Omwrtmon66T1Y_9WuykW-J9NZTx6KrvzPMqVI13T2jNvO"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<h4 class="text-body-lg font-headline-md leading-tight">Maharaja Krishnachandra o Samakal</h4>
+<p class="text-caption text-on-surface-variant mt-1 italic">Mudra Publication</p>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-caption font-label-md">Qty: 1</span>
+<span class="font-semibold">₹450</span>
+</div>
+</div>
+</div>
+<!-- Book Item 2 -->
+<div class="flex space-x-stack-md">
+<div class="w-20 h-28 bg-secondary-container flex-shrink-0 luxury-shadow overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A luxurious culinary book cover for 'Mughal E Rasui' showcasing a minimalist flat-lay of exotic spices and gold-leaf patterns against a deep charcoal background. High-end editorial photography with sharp focus and cinematic lighting that highlights the textures of physical book art." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcnLKw1OVxtikoGA5mJZCU1jceTH_c0ZgQ_D4nMf4kQZlqSGbys48A_tjcO1K3eQnqgmug1-RwvHsuaOX9BNWHfATXH8zaGPPT-DwvxIQTzOWL3ZatXpfigdqJUEX9UU6Xv98gt5n74vapcOvFBzN-9grS6SD6Mpz6SoFUGOiFDh7Hw7clNcdUDoEtPDhkXD3A_i32O5ocS9tjI2QWmV6UPB3KwHipQKzZj3XH3YNszstmPjSYnGS_KmoA9vWyshxKZsEODvlW4-lx"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<h4 class="text-body-lg font-headline-md leading-tight">Mughal E Rasui</h4>
+<p class="text-caption text-on-surface-variant mt-1 italic">Mudra Publication</p>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-caption font-label-md">Qty: 1</span>
+<span class="font-semibold">₹850</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-unit border-t border-outline-variant pt-stack-md">
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Subtotal</span>
+<span>₹1300</span>
+</div>
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Shipping</span>
+<span>₹50</span>
+</div>
+<div class="flex justify-between text-headline-md font-bold pt-stack-sm">
+<span>Total</span>
+<span>₹1350</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- SideNavBar (Mobile / Slide-over Overlay) -->
+<div class="fixed inset-0 z-[60] opacity-0 pointer-events-none transition-all duration-300" id="side-cart">
+<div class="absolute inset-0 bg-black/30 backdrop-blur-sm" onclick="toggleSideCart()"></div>
+<aside class="fixed right-0 top-0 h-full w-full sm:w-96 bg-surface-bright shadow-2xl border-l border-outline-variant transform translate-x-full transition-transform duration-300 ease-out flex flex-col p-gutter">
+<div class="flex justify-between items-center mb-stack-lg">
+<div class="text-headline-md font-headline-md text-primary">Your Cart</div>
+<button class="text-on-surface-variant hover:text-primary" onclick="toggleSideCart()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto space-y-gutter pr-2 custom-scrollbar">
+<!-- Mobile Item 1 -->
+<div class="flex space-x-stack-md">
+<div class="w-20 h-28 bg-secondary-container flex-shrink-0 luxury-shadow overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up of a premium book binding with a minimalist Bengali script title. The lighting is warm and directional, casting soft shadows that evoke the feeling of a quiet library or an artist's workshop. High resolution detail on paper grain." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkBUhU-f0GZ0eR4SOyTGMk8Vwa_iIMyc7hq_0G9imY9rIWRycARC4FExmTd7Z1OTPHhsxAwed6unFNl60awOkhneVTD6hS_sAnz6M2s4g9_F1NCQPSEAeWm1vpr9XECsfbITasDN8ss_z_u9zg0ZqGw-nTiPBbasXhvi2kxBzvHtxDF58RGtXB0ZSpW2ucRHig_VLt2ya-Cjt4sNt7txvoOS2JcVHIVMAp_LjEPpZ2zlBVVeX7h5MCJPz6bedDAEN3QG-DmCx8LNTM"/>
+</div>
+<div class="flex-1">
+<h4 class="text-body-md font-headline-md">Maharaja Krishnachandra o Samakal</h4>
+<div class="flex justify-between items-center mt-2">
+<div class="flex items-center space-x-stack-sm border border-outline-variant rounded px-2 py-1">
+<button class="text-on-surface-variant hover:text-primary">-</button>
+<span class="text-label-md">1</span>
+<button class="text-on-surface-variant hover:text-primary">+</button>
+</div>
+<span class="font-semibold text-body-md">₹450</span>
+</div>
+</div>
+</div>
+<!-- Mobile Item 2 -->
+<div class="flex space-x-stack-md">
+<div class="w-20 h-28 bg-secondary-container flex-shrink-0 luxury-shadow overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Sophisticated book cover art with deep contrast and rich textures. Elements of gold foil against dark charcoal paper create a premium editorial look. Perfect for a luxury publisher's website showcase." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1yzZRMUk67E-xYYwa_ZbL3Kc6qRwSwmrY97d8fzHwLmbpgQDKiRuebrr6ld8zVQrBUcKNaW7JJyvuvvPyD9-ji0TekhZBmCwoJkDYgxB-YMB7H_dUkHpRvNmLF2yxIMctIS4d3gxPG-wOuR3paTnkE-0vwy7ToYoMU6FRE9NAnzuWj0UsV0HHy_OXHfCMZwAW137dTMT1nCuX9ShBkw2fDu-WWU7h_HEd-rpQ561t_3fs-PDKa-1ho2cp0MtCLycBuk55UvNobO3-"/>
+</div>
+<div class="flex-1">
+<h4 class="text-body-md font-headline-md">Mughal E Rasui</h4>
+<div class="flex justify-between items-center mt-2">
+<div class="flex items-center space-x-stack-sm border border-outline-variant rounded px-2 py-1">
+<button class="text-on-surface-variant hover:text-primary">-</button>
+<span class="text-label-md">1</span>
+<button class="text-on-surface-variant hover:text-primary">+</button>
+</div>
+<span class="font-semibold text-body-md">₹850</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-stack-lg border-t border-outline-variant mt-stack-md">
+<div class="flex justify-between mb-stack-sm">
+<span class="text-on-surface-variant">Total</span>
+<span class="text-headline-md font-bold text-primary">₹1350</span>
+</div>
+<button class="w-full py-stack-md bg-primary text-on-primary font-label-md tracking-widest uppercase hover:opacity-90 transition-opacity" onclick="toggleSideCart()">
+                    Continue to Checkout
+                </button>
+</div>
+</aside>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant mt-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="space-y-stack-sm">
+<div class="text-headline-sm font-headline-md text-primary">Boighor</div>
+<p class="text-caption text-on-secondary-container">© 2024 Boighor. Mudra Publication, Krishnagar. All rights reserved.</p>
+</div>
+<div class="flex flex-col space-y-unit">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Shipping Info</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Contact Us</a>
+</div>
+<div class="flex flex-col space-y-unit">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Newsletter Signup</a>
+</div>
+</div>
+</footer>
+<script>
+        function toggleSideCart() {
+            const sideCart = document.getElementById('side-cart');
+            const aside = sideCart.querySelector('aside');
+            
+            if (sideCart.classList.contains('opacity-0')) {
+                sideCart.classList.remove('opacity-0', 'pointer-events-none');
+                aside.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden';
+            } else {
+                sideCart.classList.add('opacity-0', 'pointer-events-none');
+                aside.classList.add('translate-x-full');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Micro-interactions for inputs
+        document.querySelectorAll('input, textarea').forEach(el => {
+            el.addEventListener('focus', () => {
+                el.parentElement.querySelector('label')?.classList.add('text-primary');
+            });
+            el.addEventListener('blur', () => {
+                el.parentElement.querySelector('label')?.classList.remove('text-primary');
+            });
+        });
+    </script>
+</body></html>

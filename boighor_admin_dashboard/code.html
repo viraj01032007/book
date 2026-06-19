@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Boighor Admin | Mudra Publication</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:wght@100..900&display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c4c7c7",
+                    "secondary-container": "#e1dfdb",
+                    "secondary-fixed-dim": "#c8c6c2",
+                    "on-background": "#1c1c16",
+                    "secondary-fixed": "#e4e2dd",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1c1c16",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#f2ede4",
+                    "surface-container-highest": "#e6e2d9",
+                    "on-secondary-fixed": "#1b1c19",
+                    "on-surface-variant": "#444748",
+                    "primary-container": "#1c1b1b",
+                    "inverse-primary": "#c8c6c5",
+                    "on-tertiary-fixed": "#191d0e",
+                    "surface-container-high": "#ece8df",
+                    "secondary": "#5e5e5b",
+                    "tertiary": "#000000",
+                    "on-secondary-fixed-variant": "#474744",
+                    "background": "#fdf9f0",
+                    "tertiary-fixed": "#e0e5cc",
+                    "surface-bright": "#fdf9f0",
+                    "outline": "#747878",
+                    "on-tertiary-container": "#818671",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#c4c9b1",
+                    "primary": "#000000",
+                    "surface-container-low": "#f7f3ea",
+                    "tertiary-container": "#191d0e",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dedad1",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-primary-fixed": "#1c1b1b",
+                    "inverse-on-surface": "#f5f0e7",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#32302a",
+                    "on-tertiary-fixed-variant": "#444937",
+                    "surface-tint": "#5f5e5e",
+                    "primary-fixed": "#e5e2e1",
+                    "surface": "#fdf9f0",
+                    "surface-variant": "#e6e2d9",
+                    "on-secondary-container": "#63635f",
+                    "on-primary-container": "#858383",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#c8c6c5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "container-max": "1280px",
+                    "stack-md": "24px",
+                    "margin-mobile": "20px",
+                    "gutter": "32px",
+                    "margin-desktop": "64px",
+                    "stack-lg": "48px",
+                    "stack-sm": "12px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "caption": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .order-row:hover {
+            box-shadow: 0 4px 20px rgba(26, 26, 26, 0.03);
+            transform: translateY(-1px);
+        }
+        .transition-soft {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen selection:bg-secondary-container">
+<!-- TopNavBar -->
+<header class="bg-background border-b border-outline-variant sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-unit max-w-container-max mx-auto">
+<div class="flex items-center gap-stack-md">
+<span class="text-headline-md font-headline-md font-bold text-primary">Boighor</span>
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface-variant hover:text-primary transition-opacity duration-300 font-body-md text-body-md" href="#">Catalog</a>
+<a class="text-on-surface-variant hover:text-primary transition-opacity duration-300 font-body-md text-body-md" href="#">Collections</a>
+<a class="text-on-surface-variant hover:text-primary transition-opacity duration-300 font-body-md text-body-md" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-stack-md">
+<!-- User/Admin Toggle -->
+<div class="flex bg-surface-container rounded-full p-1 border border-outline-variant items-center">
+<button class="px-4 py-1.5 rounded-full text-label-md font-label-md transition-soft bg-transparent text-on-surface-variant hover:opacity-80" id="userViewBtn" onclick="setMode('user')">
+                        User
+                    </button>
+<button class="px-4 py-1.5 rounded-full text-label-md font-label-md transition-soft bg-primary text-on-primary shadow-sm" id="adminViewBtn" onclick="setMode('admin')">
+                        Admin
+                    </button>
+</div>
+<button class="material-symbols-outlined text-primary p-2 hover:bg-surface-container rounded-full transition-soft">shopping_cart</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A professional studio portrait of a bookstore administrator in a minimalist setting. The person wears a crisp charcoal blazer against a warm bone-colored background. The lighting is soft and high-key, emphasizing a clean and authoritative executive look that aligns with a premium digital atelier aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGH1w85Zmm1AkIZIVY-nHo7JFo47GgqSpuFhB1MxKkNWDROxoCZE1K7mqfIWJr5oh2CZ6eMHmJjT7G6tueXWo0V7qdKYR6iugy5undbBXWWR2w6hR-0YOypFZpRFyX-qDwtezZ_V0oNaeT6RD-LTFETvkemywx2BpeSWP_4e5V6QeP8CJXq1vbRyFbH1OkGBTALQMon9NWbNBiyDNjSPSt-fgAmKN0DMZDX7lCXAqHmOsmZ-SYCoVavTrQiExh_wlCS6ZppNc-_vgc"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-desktop py-stack-lg">
+<!-- Dashboard Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-stack-md mb-stack-lg">
+<div>
+<h1 class="text-headline-lg font-headline-lg text-primary mb-2">Order Management</h1>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-2xl">Manage your tactile treasures. Review, verify, and fulfill orders with the precision of a master librarian.</p>
+</div>
+<div class="flex gap-stack-sm">
+<button class="flex items-center gap-2 px-gutter py-3 bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:opacity-90 transition-soft">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                    Export CSV
+                </button>
+</div>
+</div>
+<!-- Order Statistics / Bento Overview -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-stack-lg">
+<div class="bg-surface-bright border border-outline-variant p-gutter rounded-xl">
+<div class="flex justify-between items-start mb-stack-md">
+<span class="material-symbols-outlined text-on-surface-variant bg-surface-container p-3 rounded-lg">shopping_bag</span>
+<span class="text-label-md font-label-md text-primary">+12% vs last week</span>
+</div>
+<div class="text-display-lg font-display-lg text-primary">124</div>
+<div class="text-label-md font-label-md text-on-surface-variant uppercase tracking-widest mt-1">Total Active Orders</div>
+</div>
+<div class="bg-surface-bright border border-outline-variant p-gutter rounded-xl">
+<div class="flex justify-between items-start mb-stack-md">
+<span class="material-symbols-outlined text-on-surface-variant bg-surface-container p-3 rounded-lg">payments</span>
+<span class="text-label-md font-label-md text-primary">Verified</span>
+</div>
+<div class="text-display-lg font-display-lg text-primary">৳42,850</div>
+<div class="text-label-md font-label-md text-on-surface-variant uppercase tracking-widest mt-1">Monthly Revenue</div>
+</div>
+<div class="bg-surface-bright border border-outline-variant p-gutter rounded-xl">
+<div class="flex justify-between items-start mb-stack-md">
+<span class="material-symbols-outlined text-on-surface-variant bg-surface-container p-3 rounded-lg">pending_actions</span>
+<span class="text-label-md font-label-md text-error">Action Required</span>
+</div>
+<div class="text-display-lg font-display-lg text-primary">8</div>
+<div class="text-label-md font-label-md text-on-surface-variant uppercase tracking-widest mt-1">Pending Verification</div>
+</div>
+</div>
+<!-- Orders Table Section -->
+<div class="bg-surface-bright border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+<div class="px-gutter py-stack-md border-b border-outline-variant flex flex-col md:flex-row md:items-center justify-between gap-stack-md">
+<div class="relative w-full md:w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 bg-surface-container-low border border-outline rounded-lg text-body-md font-body-md focus:ring-0 focus:border-primary transition-soft outline-none" placeholder="Search Order ID, Name, or Book..." type="text"/>
+</div>
+<div class="flex items-center gap-stack-sm">
+<button class="p-2 hover:bg-surface-container rounded-lg transition-soft border border-outline-variant text-on-surface-variant flex items-center gap-2 px-4">
+<span class="material-symbols-outlined">filter_list</span>
+<span class="text-label-md font-label-md">Filter</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface-container-low">
+<tr>
+<th class="px-gutter py-4 text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">Order ID</th>
+<th class="px-gutter py-4 text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">Customer Name</th>
+<th class="px-gutter py-4 text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">Phone</th>
+<th class="px-gutter py-4 text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">Books Ordered</th>
+<th class="px-gutter py-4 text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">Total</th>
+<th class="px-gutter py-4 text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">Status</th>
+<th class="px-gutter py-4 text-label-md font-label-md text-on-surface-variant uppercase tracking-wider">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<!-- Row 1 -->
+<tr class="order-row transition-soft bg-white">
+<td class="px-gutter py-5 text-body-md font-body-md text-primary font-medium">#ORD-4921</td>
+<td class="px-gutter py-5 text-body-md font-body-md">Arijit Chatterjee</td>
+<td class="px-gutter py-5 text-body-md font-body-md">+880 1712 345678</td>
+<td class="px-gutter py-5 text-body-md font-body-md italic font-headline-md">Noder Dol</td>
+<td class="px-gutter py-5 text-body-md font-body-md font-semibold">৳1,250</td>
+<td class="px-gutter py-5">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full text-caption font-label-md uppercase">Verified</span>
+</td>
+<td class="px-gutter py-5">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-soft p-1">more_vert</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="order-row transition-soft bg-white">
+<td class="px-gutter py-5 text-body-md font-body-md text-primary font-medium">#ORD-4922</td>
+<td class="px-gutter py-5 text-body-md font-body-md">Mousumi Roy</td>
+<td class="px-gutter py-5 text-body-md font-body-md">+880 1911 876543</td>
+<td class="px-gutter py-5 text-body-md font-body-md italic font-headline-md">Banalata Sen, Sanchaita</td>
+<td class="px-gutter py-5 text-body-md font-body-md font-semibold">৳2,100</td>
+<td class="px-gutter py-5">
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant rounded-full text-caption font-label-md uppercase">Pending</span>
+</td>
+<td class="px-gutter py-5">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-soft p-1">more_vert</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="order-row transition-soft bg-white">
+<td class="px-gutter py-5 text-body-md font-body-md text-primary font-medium">#ORD-4923</td>
+<td class="px-gutter py-5 text-body-md font-body-md">Imran Hossain</td>
+<td class="px-gutter py-5 text-body-md font-body-md">+880 1515 998877</td>
+<td class="px-gutter py-5 text-body-md font-body-md italic font-headline-md">Pather Panchali</td>
+<td class="px-gutter py-5 text-body-md font-body-md font-semibold">৳450</td>
+<td class="px-gutter py-5">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full text-caption font-label-md uppercase">Verified</span>
+</td>
+<td class="px-gutter py-5">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-soft p-1">more_vert</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="order-row transition-soft bg-white">
+<td class="px-gutter py-5 text-body-md font-body-md text-primary font-medium">#ORD-4924</td>
+<td class="px-gutter py-5 text-body-md font-body-md">Tania Ahmed</td>
+<td class="px-gutter py-5 text-body-md font-body-md">+880 1610 223344</td>
+<td class="px-gutter py-5 text-body-md font-body-md italic font-headline-md">Chokher Bali</td>
+<td class="px-gutter py-5 text-body-md font-body-md font-semibold">৳890</td>
+<td class="px-gutter py-5">
+<span class="px-3 py-1 bg-error-container text-on-error-container rounded-full text-caption font-label-md uppercase">Cancelled</span>
+</td>
+<td class="px-gutter py-5">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-soft p-1">more_vert</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-gutter py-4 bg-surface-container-low border-t border-outline-variant flex items-center justify-between">
+<span class="text-caption font-caption text-on-surface-variant">Showing 4 of 48 orders</span>
+<div class="flex gap-2">
+<button class="p-2 border border-outline-variant rounded hover:bg-surface-container transition-soft disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-2 border border-outline-variant rounded hover:bg-surface-container transition-soft">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="space-y-4">
+<span class="text-headline-sm font-headline-md text-primary">Boighor</span>
+<p class="text-caption font-caption text-on-surface-variant max-w-xs">Curating the finest Bengali literature for the digital age. A boutique publishing initiative by Mudra Publication.</p>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-body-md font-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-body-md font-body-md" href="#">Shipping Info</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-body-md font-body-md" href="#">Contact Us</a>
+</div>
+<div class="flex flex-col gap-2">
+<p class="text-body-md font-body-md font-semibold text-primary mb-2">Newsletter</p>
+<div class="flex gap-2">
+<input class="flex-1 bg-surface-bright border border-outline rounded-lg px-4 py-2 outline-none focus:border-primary transition-soft" placeholder="Email" type="email"/>
+<button class="px-6 py-2 bg-primary text-on-primary rounded-lg font-label-md text-label-md">Join</button>
+</div>
+<p class="text-caption font-caption mt-6 text-on-surface-variant opacity-70">© 2024 Boighor. Mudra Publication, Krishnagar. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+        function setMode(mode) {
+            const userBtn = document.getElementById('userViewBtn');
+            const adminBtn = document.getElementById('adminViewBtn');
+            
+            if (mode === 'user') {
+                userBtn.classList.remove('bg-transparent', 'text-on-surface-variant');
+                userBtn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+                
+                adminBtn.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+                adminBtn.classList.add('bg-transparent', 'text-on-surface-variant');
+                
+                // Real-world logic would redirect or re-render here
+                console.log('Switching to User View...');
+            } else {
+                adminBtn.classList.remove('bg-transparent', 'text-on-surface-variant');
+                adminBtn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+                
+                userBtn.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+                userBtn.classList.add('bg-transparent', 'text-on-surface-variant');
+                
+                console.log('Switching to Admin View...');
+            }
+        }
+
+        // Search highlight interaction
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('scale-[1.01]');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('scale-[1.01]');
+        });
+    </script>
+</body></html>

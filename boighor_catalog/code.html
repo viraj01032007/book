@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Catalog | Boighor - The Digital Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c4c7c7",
+                    "secondary-container": "#e1dfdb",
+                    "secondary-fixed-dim": "#c8c6c2",
+                    "on-background": "#1c1c16",
+                    "secondary-fixed": "#e4e2dd",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1c1c16",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#f2ede4",
+                    "surface-container-highest": "#e6e2d9",
+                    "on-secondary-fixed": "#1b1c19",
+                    "on-surface-variant": "#444748",
+                    "primary-container": "#1c1b1b",
+                    "inverse-primary": "#c8c6c5",
+                    "on-tertiary-fixed": "#191d0e",
+                    "surface-container-high": "#ece8df",
+                    "secondary": "#5e5e5b",
+                    "tertiary": "#000000",
+                    "on-secondary-fixed-variant": "#474744",
+                    "background": "#fdf9f0",
+                    "tertiary-fixed": "#e0e5cc",
+                    "surface-bright": "#fdf9f0",
+                    "outline": "#747878",
+                    "on-tertiary-container": "#818671",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#c4c9b1",
+                    "primary": "#000000",
+                    "surface-container-low": "#f7f3ea",
+                    "tertiary-container": "#191d0e",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dedad1",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-primary-fixed": "#1c1b1b",
+                    "inverse-on-surface": "#f5f0e7",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#32302a",
+                    "on-tertiary-fixed-variant": "#444937",
+                    "surface-tint": "#5f5e5e",
+                    "primary-fixed": "#e5e2e1",
+                    "surface": "#fdf9f0",
+                    "surface-variant": "#e6e2d9",
+                    "on-secondary-container": "#63635f",
+                    "on-primary-container": "#858383",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#c8c6c5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "container-max": "1280px",
+                    "stack-md": "24px",
+                    "margin-mobile": "20px",
+                    "gutter": "32px",
+                    "margin-desktop": "64px",
+                    "stack-lg": "48px",
+                    "stack-sm": "12px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "caption": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .book-card-shadow {
+            box-shadow: 0 10px 30px rgba(26, 26, 26, 0.04);
+        }
+        .book-card-hover:hover {
+            box-shadow: 0 15px 40px rgba(26, 26, 26, 0.08);
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md transition-colors duration-300">
+<!-- TopNavBar -->
+<header class="bg-background dark:bg-background border-b border-outline-variant docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-unit max-w-container-max mx-auto">
+<div class="flex items-center space-x-gutter">
+<a class="text-headline-md font-headline-md font-bold text-primary dark:text-on-primary-fixed" href="#">Boighor</a>
+<nav class="hidden md:flex space-x-stack-md">
+<a class="text-primary dark:text-inverse-primary border-b-2 border-primary pb-1 font-body-md hover:opacity-80 transition-opacity duration-300" href="#">Catalog</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-body-md transition-opacity duration-300" href="#">Collections</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-body-md transition-opacity duration-300" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center space-x-stack-md flex-1 justify-end max-w-xl">
+<div class="relative w-full max-w-xs group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-low border-none focus:ring-1 focus:ring-primary rounded-full pl-10 pr-4 py-2 text-label-md transition-all duration-200" placeholder="Search by title, author..." type="text"/>
+</div>
+<div class="flex items-center space-x-stack-sm">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-secondary-container overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLzsYmwoT4049JhMfM9xeEp4ixnGq5rwHQ8IRl07_Erhs94WOtr6pi-mgh6P9G4CgRtYTNliK3wH1-cuBUDsKaEUglGC7PO1N0fSq6oedpNL1-SNKaarMffgAtVbtAeFUq0x5YFxpaoG8mqydfRccNO1bmeeUPRYb-ZW-wbJoctXpCMdb8-WdDhrFYcon70BupJxlHMzWiJeMbVJVe-20BrX6hShyhRG3ty8-d5rV7rFszzngz9t1axOopdmydFILYKDrd44JHkMYa"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-desktop py-stack-lg flex flex-col md:flex-row gap-gutter">
+<!-- Sidebar Filters -->
+<aside class="w-full md:w-64 flex-shrink-0">
+<div class="sticky top-24 space-y-stack-lg">
+<div>
+<h3 class="text-headline-md font-headline-md mb-stack-md">Categories</h3>
+<ul class="space-y-stack-sm">
+<li>
+<label class="flex items-center group cursor-pointer">
+<input class="w-4 h-4 border-outline rounded-sm text-primary focus:ring-primary" type="checkbox"/>
+<span class="ml-stack-sm text-body-md text-on-surface-variant group-hover:text-primary transition-colors">History</span>
+</label>
+</li>
+<li>
+<label class="flex items-center group cursor-pointer">
+<input class="w-4 h-4 border-outline rounded-sm text-primary focus:ring-primary" type="checkbox"/>
+<span class="ml-stack-sm text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Fiction</span>
+</label>
+</li>
+<li>
+<label class="flex items-center group cursor-pointer">
+<input class="w-4 h-4 border-outline rounded-sm text-primary focus:ring-primary" type="checkbox"/>
+<span class="ml-stack-sm text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Cookery</span>
+</label>
+</li>
+<li>
+<label class="flex items-center group cursor-pointer">
+<input class="w-4 h-4 border-outline rounded-sm text-primary focus:ring-primary" type="checkbox"/>
+<span class="ml-stack-sm text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Academic</span>
+</label>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="text-headline-md font-headline-md mb-stack-md">Price Range</h3>
+<div class="space-y-stack-sm">
+<input class="w-full accent-primary" max="2000" min="100" step="50" type="range"/>
+<div class="flex justify-between text-caption text-on-surface-variant">
+<span>₹100</span>
+<span>₹2000+</span>
+</div>
+</div>
+</div>
+<div class="pt-stack-md border-t border-outline-variant">
+<button class="w-full py-2 border border-primary text-primary font-label-md hover:bg-primary-container hover:text-on-primary-container transition-all">Clear All</button>
+</div>
+</div>
+</aside>
+<!-- Catalog Grid -->
+<section class="flex-1">
+<header class="flex justify-between items-end mb-stack-lg">
+<div>
+<h1 class="text-headline-lg font-headline-lg mb-2">The Catalog</h1>
+<p class="text-body-md text-on-surface-variant">Discover our curated selection of fine publications.</p>
+</div>
+<div class="flex items-center space-x-stack-sm">
+<span class="text-label-md text-on-surface-variant uppercase">Sort By:</span>
+<select class="bg-transparent border-none focus:ring-0 text-label-md font-bold cursor-pointer">
+<option>Recommended</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Newest Arrivals</option>
+</select>
+</div>
+</header>
+<!-- Bento Grid of Books -->
+<div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter">
+<!-- Book 1 -->
+<div class="group">
+<div class="aspect-[2/3] bg-surface-container-low overflow-hidden book-card-shadow book-card-hover transition-all duration-300 relative mb-stack-sm">
+<img alt="Maharaja Krishnachandra o Samakal" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAp9ZwoV-VmJAoOiUQx9QYnIq3YZgFnArbmPrPQRnRkfz-QYWqkPMUlwFdnaJE3lonR9PEA4o8YAR26mpC7NGOCp3yqneg2EG1ZcJCpAQg2f4Xvmym8-3kNWtP958jFTjuS1cFT5GHHHXi4tOed-Dfqk6LgqF5_uzy30mAAb7-qoE72x795na5njqlNyFJ92lDs4sZQwQk0JYcPZuqX7Ub0TlpNc0ACgtydoc5LKx3yQ6d64T0yO7AxEwiSxJ7cHZZM_z7tgWzVYes"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-gutter">
+<button class="bg-primary text-on-primary px-stack-md py-stack-sm font-label-md transform translate-y-4 group-hover:translate-y-0 transition-transform flex items-center">
+<span class="material-symbols-outlined mr-2" style="font-size: 18px;">shopping_bag</span>
+                                Add to Cart
+                            </button>
+</div>
+</div>
+<h4 class="font-headline-md text-body-lg mb-1 leading-tight line-clamp-2">Maharaja Krishnachandra o Samakal</h4>
+<p class="text-caption text-on-surface-variant mb-2">History &amp; Heritage</p>
+<p class="text-body-md font-bold">₹680</p>
+</div>
+<!-- Book 6 (High Value - Highlight) -->
+<div class="group">
+<div class="aspect-[2/3] bg-surface-container-low overflow-hidden book-card-shadow book-card-hover transition-all duration-300 relative mb-stack-sm">
+<img alt="Organising the Unorganised" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnXCByzgL0edEja9_Yx4GRlEXHKkstS1aLdXw5gYNMOyk5H9OczW-bt9-UJ3kI-kgm_EHzfRQ_M4Fyk-edg1Z7ri3F0uVjYvwDBEXWMlK9UxsSYpmkO-pAaDwS39Aq3N1Rz8FraUOdah7q4R6voEwME_BG7EPDsO2ibS8YDMr1s3MrkxggH-hkpvQDPu9Gb17zJwCHawok1AzJGahX_TlPVfryzXMiN12ERVkDWIoU2iAKIE93dOl8mUpqoNa_bVO6tUeOUSAAwSSx"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-gutter">
+<button class="bg-primary text-on-primary px-stack-md py-stack-sm font-label-md transform translate-y-4 group-hover:translate-y-0 transition-transform flex items-center">
+<span class="material-symbols-outlined mr-2" style="font-size: 18px;">shopping_bag</span>
+                                Add to Cart
+                            </button>
+</div>
+</div>
+<h4 class="font-headline-md text-body-lg mb-1 leading-tight line-clamp-2">Organising the Unorganised</h4>
+<p class="text-caption text-on-surface-variant mb-2">Academic &amp; Sociology</p>
+<p class="text-body-md font-bold">₹1,200</p>
+</div>
+<!-- Book 3 -->
+<div class="group">
+<div class="aspect-[2/3] bg-surface-container-low overflow-hidden book-card-shadow book-card-hover transition-all duration-300 relative mb-stack-sm">
+<img alt="Noder Dol" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuYHAkPkQzDB8fnrCyvS7mhyHxMVfHsL37XCCFp5Gp1KQzXmNkYtaGT148_GJB3NmYIuZzaa-30OzwQAxvGt_aDQNsFtsFMy6LtMag2-VpwGavL4FP8MLIqY-b-c0vcFkMqa_pzuWRrUBXf5aKUFvwVBSJ-p3WT2p3hcit9fBnT4tkjGIDUyXujvbUrrZtk3AXVs29kRkpvxEJvrBwVuMEMTSPhRjqcOo9QFQTKODVcuiPsV0S9p07VkeY4djLlt4kdK47wcJiwH6k"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-gutter">
+<button class="bg-primary text-on-primary px-stack-md py-stack-sm font-label-md transform translate-y-4 group-hover:translate-y-0 transition-transform flex items-center">
+<span class="material-symbols-outlined mr-2" style="font-size: 18px;">shopping_bag</span>
+                                Add to Cart
+                            </button>
+</div>
+</div>
+<h4 class="font-headline-md text-body-lg mb-1 leading-tight line-clamp-2">Noder Dol</h4>
+<p class="text-caption text-on-surface-variant mb-2">Fiction &amp; Culture</p>
+<p class="text-body-md font-bold">₹180</p>
+</div>
+<!-- Book 4 -->
+<div class="group">
+<div class="aspect-[2/3] bg-surface-container-low overflow-hidden book-card-shadow book-card-hover transition-all duration-300 relative mb-stack-sm">
+<img alt="Parama Antardhyan Rahoshya" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq5oVTyXfEWcmsmWfVhQZhcUcER7IIhziJCrjLUY4ocx0WPuK--HhpPAUSKKJ-JbVxomxGSR2qb1ygqXKHYUT3_asNoW0eHNqiAgn9M5tlIOTnekpJTqYuUXwXmNmabDfAgkMNGMJsSALg0KQPtbZRTQMRwTmF2Yx--S2eTb-vVsytcfY8zGs9lAOMatWIT-JmTUzdZE6S1UWGIVeLbmT3akawnSOOOUXAFqz35jXXLyziUqVMrMlQwRjIZ2_VrGUWNb6mPLi0QkBC"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-gutter">
+<button class="bg-primary text-on-primary px-stack-md py-stack-sm font-label-md transform translate-y-4 group-hover:translate-y-0 transition-transform flex items-center">
+<span class="material-symbols-outlined mr-2" style="font-size: 18px;">shopping_bag</span>
+                                Add to Cart
+                            </button>
+</div>
+</div>
+<h4 class="font-headline-md text-body-lg mb-1 leading-tight line-clamp-2">Parama Antardhyan Rahoshya</h4>
+<p class="text-caption text-on-surface-variant mb-2">Mystery &amp; Thriller</p>
+<p class="text-body-md font-bold">₹180</p>
+</div>
+<!-- Book 2 -->
+<div class="group">
+<div class="aspect-[2/3] bg-surface-container-low overflow-hidden book-card-shadow book-card-hover transition-all duration-300 relative mb-stack-sm">
+<img alt="Mughal E Rasui" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnqRygGaLF9B6SZbAW1Hcyv9_sKwVAq1HHhVRQC1FKRRRcyOWJN9qccb2iwiew2zqVwWY2elFP-MBb0_A7G43g52RqZJF7dAC58g3kIMNQQi9V4DttPtUeoicSp76bzQNAPCVRXOixNXEoCQimGpSDDtrlri1-EWtaXInROKzFjcr7IN0sMhQGxtb3zj1bfOR1NLzcAIE9kVHRWlu_VETBbC8fKsH-Wr2ozji9G_eXQWAlmk9_as0wOLW4R3T-4KZFoUax_TjA7EVv"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-gutter">
+<button class="bg-primary text-on-primary px-stack-md py-stack-sm font-label-md transform translate-y-4 group-hover:translate-y-0 transition-transform flex items-center">
+<span class="material-symbols-outlined mr-2" style="font-size: 18px;">shopping_bag</span>
+                                Add to Cart
+                            </button>
+</div>
+</div>
+<h4 class="font-headline-md text-body-lg mb-1 leading-tight line-clamp-2">Mughal E Rasui</h4>
+<p class="text-caption text-on-surface-variant mb-2">Cookery &amp; Gastronomy</p>
+<p class="text-body-md font-bold">₹180</p>
+</div>
+<!-- Book 5 -->
+<div class="group">
+<div class="aspect-[2/3] bg-surface-container-low overflow-hidden book-card-shadow book-card-hover transition-all duration-300 relative mb-stack-sm">
+<img alt="Tamal Bandyopadhyayer Baroti Golpo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACCSUzOhDPpOclLJut9zO3i4_-DnmnN6jLZ9GFA3TDVNa5qyaVYsz2MQlZUF1hF1Vyf93VLDJ9RyHRJNtFhN7I0Jkz-o16nW1IQL1bju3VI-VMVTpSJ8ACu7a-6NfVSKoMIqy4RX6ggGfUE3BgBHPLzm85WV6eyvIegnQzZSnNpHJTXKJo-UfxImtYBXaF4_u6aa4fwJaLIfufvCvMP1uZhc6ASpzvshzSzQE4lyUgN1BjzsUq5rzf-GxVKrmL9EsbNG_8lzDjoIvS"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-gutter">
+<button class="bg-primary text-on-primary px-stack-md py-stack-sm font-label-md transform translate-y-4 group-hover:translate-y-0 transition-transform flex items-center">
+<span class="material-symbols-outlined mr-2" style="font-size: 18px;">shopping_bag</span>
+                                Add to Cart
+                            </button>
+</div>
+</div>
+<h4 class="font-headline-md text-body-lg mb-1 leading-tight line-clamp-2">Tamal Bandyopadhyayer Baroti Golpo</h4>
+<p class="text-caption text-on-surface-variant mb-2">Short Stories</p>
+<p class="text-body-md font-bold">₹200</p>
+</div>
+<!-- Book 7 -->
+<div class="group">
+<div class="aspect-[2/3] bg-surface-container-low overflow-hidden book-card-shadow book-card-hover transition-all duration-300 relative mb-stack-sm">
+<img alt="Jagadhtrir uthsa sandhane" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDceHXPDVChI-igGQ0mX38xPs8AeyLzCb7vHsS9MKs0yWo8Qimw8LYMN-9slT72OH3A2KNFfTNCTDq9oDkuAUe5Svvl3y8NcmBpTTMdfP5WcykhBdaXUC3ZzvkhGF_peAapVEy9NAyTJj0rpbkniQ6SiF44k3ff63hR3URU4FRrgDMQJPYGlKrgsshFxEo93v2h6GhE4eK1w48pRliVVGmCw9nfkqECed-gTeLwrzQMY-HTGvXbqLoLFp26qc0aToO5OklD66OFqE9f"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-gutter">
+<button class="bg-primary text-on-primary px-stack-md py-stack-sm font-label-md transform translate-y-4 group-hover:translate-y-0 transition-transform flex items-center">
+<span class="material-symbols-outlined mr-2" style="font-size: 18px;">shopping_bag</span>
+                                Add to Cart
+                            </button>
+</div>
+</div>
+<h4 class="font-headline-md text-body-lg mb-1 leading-tight line-clamp-2">Jagadhtrir uthsa sandhane</h4>
+<p class="text-caption text-on-surface-variant mb-2">Spirituality &amp; Research</p>
+<p class="text-body-md font-bold">₹350</p>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-stack-lg flex justify-center items-center space-x-stack-sm">
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:bg-primary hover:text-on-primary transition-all rounded-sm">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center bg-primary text-on-primary font-bold rounded-sm">1</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:bg-primary hover:text-on-primary transition-all rounded-sm">2</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:bg-primary hover:text-on-primary transition-all rounded-sm">3</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:bg-primary hover:text-on-primary transition-all rounded-sm">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container-highest full-width border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="space-y-stack-sm">
+<h2 class="text-headline-sm font-headline-md text-primary">Boighor</h2>
+<p class="text-body-md text-on-surface-variant max-w-xs">
+                    Honoring the tactile heritage of physical books through a curated digital experience.
+                </p>
+<div class="flex space-x-stack-sm pt-2">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">language</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-label-md font-bold mb-stack-md uppercase tracking-widest">Customer Service</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Shipping Info</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-md font-bold mb-stack-md uppercase tracking-widest">The Newsletter</h4>
+<p class="text-caption text-on-surface-variant mb-4">Join our community for early access to limited editions.</p>
+<form class="flex flex-col space-y-2">
+<input class="bg-surface-bright border border-outline-variant focus:border-primary focus:ring-0 p-2 text-body-md" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary py-2 font-label-md hover:bg-primary-container hover:text-on-primary-container transition-all">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-stack-md border-t border-outline-variant/30 text-center">
+<p class="text-caption text-secondary dark:text-on-secondary-container opacity-60">
+                © 2024 Boighor. Mudra Publication, Krishnagar. All rights reserved.
+            </p>
+</div>
+</footer>
+<!-- Micro-interaction Script -->
+<script>
+        // Subtle hover tracking on book cards for a dynamic feel
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="light" lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>বইঘর - মহারাজা কৃষ্ণচন্দ্র ও সমকাল</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Playfair Display for Serifs, Inter for Sans-serif, Hind Siliguri for Bengali -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=Hind+Siliguri:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c4c7c7",
+                        "secondary-container": "#e1dfdb",
+                        "secondary-fixed-dim": "#c8c6c2",
+                        "on-background": "#1c1c16",
+                        "secondary-fixed": "#e4e2dd",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1c1c16",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f2ede4",
+                        "surface-container-highest": "#e6e2d9",
+                        "on-secondary-fixed": "#1b1c19",
+                        "on-surface-variant": "#444748",
+                        "primary-container": "#1c1b1b",
+                        "inverse-primary": "#c8c6c5",
+                        "on-tertiary-fixed": "#191d0e",
+                        "surface-container-high": "#ece8df",
+                        "secondary": "#5e5e5b",
+                        "tertiary": "#000000",
+                        "on-secondary-fixed-variant": "#474744",
+                        "background": "#fdf9f0",
+                        "tertiary-fixed": "#e0e5cc",
+                        "surface-bright": "#fdf9f0",
+                        "outline": "#747878",
+                        "on-tertiary-container": "#818671",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#c4c9b1",
+                        "primary": "#000000",
+                        "surface-container-low": "#f7f3ea",
+                        "tertiary-container": "#191d0e",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#dedad1",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-primary-fixed": "#1c1b1b",
+                        "inverse-on-surface": "#f5f0e7",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#32302a",
+                        "on-tertiary-fixed-variant": "#444937",
+                        "surface-tint": "#5f5e5e",
+                        "primary-fixed": "#e5e2e1",
+                        "surface": "#fdf9f0",
+                        "surface-variant": "#e6e2d9",
+                        "on-secondary-container": "#63635f",
+                        "on-primary-container": "#858383",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#c8c6c5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "stack-md": "24px",
+                        "margin-mobile": "20px",
+                        "gutter": "32px",
+                        "margin-desktop": "64px",
+                        "stack-lg": "48px",
+                        "stack-sm": "12px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display", "Hind Siliguri"],
+                        "headline-lg-mobile": ["Playfair Display", "Hind Siliguri"],
+                        "label-md": ["Inter", "Hind Siliguri"],
+                        "headline-lg": ["Playfair Display", "Hind Siliguri"],
+                        "display-lg": ["Playfair Display", "Hind Siliguri"],
+                        "caption": ["Inter", "Hind Siliguri"],
+                        "body-md": ["Inter", "Hind Siliguri"],
+                        "body-lg": ["Inter", "Hind Siliguri"],
+                        "bengali": ["Hind Siliguri", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fdf9f0;
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+        .book-card-shadow {
+            box-shadow: 0 20px 50px rgba(26, 26, 26, 0.08);
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(26, 26, 26, 0.12);
+        }
+        .premium-border {
+            border-image: linear-gradient(to right, transparent, #c4c7c7, transparent) 1;
+            border-bottom-width: 1px;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-bengali text-on-background selection:bg-primary-fixed selection:text-primary min-h-screen">
+<!-- TopNavBar Component -->
+<nav class="bg-background/80 backdrop-blur-md border-b border-outline-variant/30 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-gutter">
+<span class="text-headline-md font-headline-md font-bold tracking-tighter text-primary">মুদ্রা প্রকাশনী</span>
+<div class="hidden md:flex items-center gap-gutter text-label-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">ক্যাটালগ</a>
+<a class="text-primary border-b border-primary pb-0.5" href="#">সংগ্রহ</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">আমাদের সম্পর্কে</a>
+</div>
+</div>
+<div class="flex items-center gap-gutter">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border border-transparent focus:border-outline-variant focus:bg-white outline-none text-body-md transition-all duration-300 w-64 rounded-full" placeholder="অনুসন্ধান করুন..." type="text"/>
+</div>
+<button class="hover:scale-110 transition-transform flex items-center relative">
+<span class="material-symbols-outlined text-primary text-[24px]">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-primary text-on-primary text-[10px] w-4 h-4 rounded-full flex items-center justify-center">১</span>
+</button>
+<div class="hidden md:flex items-center gap-2 text-label-md font-medium mr-2"><button class="text-on-surface-variant hover:text-primary transition-colors">EN</button><span class="text-outline-variant/50">|</span><button class="text-primary">বাংলা</button></div><div class="w-9 h-9 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant/30 cursor-pointer hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-on-secondary-fixed text-[20px]">person</span>
+</div>
+<button class="md:hidden" onclick="toggleSideNav()">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- SideNavBar (Mobile) -->
+<div class="fixed right-0 top-0 h-full w-80 z-[60] shadow-2xl bg-surface-bright border-l border-outline-variant transition-transform duration-500 translate-x-full flex flex-col p-gutter" id="sideNav">
+<div class="flex justify-between items-center mb-stack-md">
+<span class="text-headline-md font-headline-md font-bold text-primary">মুদ্রা প্রকাশনী</span>
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors" onclick="toggleSideNav()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-stack-sm p-4 text-on-surface-variant hover:bg-surface-container rounded transition-colors" href="#"><span class="material-symbols-outlined">home</span> হোম</a>
+<a class="flex items-center gap-stack-sm p-4 text-on-surface-variant hover:bg-surface-container rounded transition-colors" href="#"><span class="material-symbols-outlined">book_2</span> ক্যাটালগ</a>
+<a class="flex items-center gap-stack-sm p-4 bg-primary text-on-primary rounded font-medium" href="#"><span class="material-symbols-outlined">auto_stories</span> সংগ্রহ</a>
+<a class="flex items-center gap-stack-sm p-4 text-on-surface-variant hover:bg-surface-container rounded transition-colors" href="#"><span class="material-symbols-outlined">shopping_bag</span> কার্ট</a>
+</div>
+</div>
+<div class="fixed inset-0 bg-black/40 z-[55] hidden transition-opacity duration-500 opacity-0" id="sideNavOverlay" onclick="toggleSideNav()"></div>
+<!-- Main Content -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 mb-10 text-caption text-secondary/70 uppercase tracking-widest font-medium">
+<a class="hover:text-primary transition-colors" href="#">লাইব্রেরি</a>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">ঐতিহাসিক বাংলা সাহিত্য</a>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<span class="text-on-surface">মহারাজা কৃষ্ণচন্দ্র ও সমকাল</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Left: Book Cover & Gallery -->
+<div class="lg:col-span-5 lg:sticky lg:top-32">
+<div class="book-card-shadow hover-lift transition-all duration-700 overflow-hidden bg-white group cursor-zoom-in">
+<img alt="Maharaja Krishnachandra o Samakal Book Cover" class="w-full h-auto object-cover aspect-[3/4] group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAp9ZwoV-VmJAoOiUQx9QYnIq3YZgFnArbmPrPQRnRkfz-QYWqkPMUlwFdnaJE3lonR9PEA4o8YAR26mpC7NGOCp3yqneg2EG1ZcJCpAQg2f4Xvmym8-3kNWtP958jFTjuS1cFT5GHHHXi4tOed-Dfqk6LgqF5_uzy30mAAb7-qoE72x795na5njqlNyFJ92lDs4sZQwQk0JYcPZuqX7Ub0TlpNc0ACgtydoc5LKx3yQ6d64T0yO7AxEwiSxJ7cHZZM_z7tgWzVYes"/>
+</div>
+<div class="mt-8 flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+<div class="w-24 aspect-[3/4] border-2 border-primary shrink-0 p-1 bg-white cursor-pointer">
+<img alt="Cover Thumbnail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAp9ZwoV-VmJAoOiUQx9QYnIq3YZgFnArbmPrPQRnRkfz-QYWqkPMUlwFdnaJE3lonR9PEA4o8YAR26mpC7NGOCp3yqneg2EG1ZcJCpAQg2f4Xvmym8-3kNWtP958jFTjuS1cFT5GHHHXi4tOed-Dfqk6LgqF5_uzy30mAAb7-qoE72x795na5njqlNyFJ92lDs4sZQwQk0JYcPZuqX7Ub0TlpNc0ACgtydoc5LKx3yQ6d64T0yO7AxEwiSxJ7cHZZM_z7tgWzVYes"/>
+</div>
+<div class="w-24 aspect-[3/4] border border-outline-variant/30 shrink-0 flex items-center justify-center bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:scale-110 transition-transform">auto_stories</span>
+</div>
+<div class="w-24 aspect-[3/4] border border-outline-variant/30 shrink-0 flex items-center justify-center bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:scale-110 transition-transform">menu_book</span>
+</div>
+</div>
+</div>
+<!-- Right: Details -->
+<div class="lg:col-span-7 flex flex-col space-y-10">
+<header class="space-y-4">
+<div class="flex flex-wrap items-center gap-3">
+<span class="bg-secondary-container/50 text-on-secondary-container text-[10px] font-bold tracking-widest px-3 py-1 rounded-full uppercase">হার্ডকভার</span>
+<span class="bg-primary text-on-primary text-[10px] font-bold tracking-widest px-3 py-1 rounded-full uppercase">লিমিটেড এডিশন</span>
+</div>
+<div class="space-y-2">
+<h1 class="text-display-lg font-headline-lg text-primary leading-tight">মহারাজা কৃষ্ণচন্দ্র ও সমকাল</h1>
+<p class="text-body-lg text-on-surface-variant font-medium">
+                        সম্পাদনায়: <span class="text-on-surface border-b border-outline-variant hover:border-primary cursor-pointer transition-colors">শৈবাল সরকার, তমাল বন্দ্যোপাধ্যায় ও অনির্বাণ জানা</span>
+</p>
+</div>
+</header>
+<!-- Pricing Section -->
+<div class="p-8 bg-white border border-outline-variant/20 rounded shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-8">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-4">
+<span class="text-[42px] font-bold text-primary">₹৬৮০</span>
+<span class="text-headline-md text-secondary/50 line-through">₹৮০০</span>
+<div class="flex flex-col ml-2">
+<span class="text-[12px] font-bold text-error bg-error-container px-2 py-0.5 rounded">১৫% ছাড়</span>
+</div>
+</div>
+<p class="text-caption text-secondary/60 mt-2 font-medium italic">বিশেষ অনলাইন মূল্য (কর সহ)</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-10 py-5 font-bold hover:bg-primary/90 transition-all flex items-center justify-center gap-3 active:scale-95 shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span> ব্যাগ-এ যোগ করুন
+                    </button>
+<button class="border-2 border-outline-variant text-primary px-6 py-5 hover:bg-primary hover:text-on-primary hover:border-primary transition-all flex items-center justify-center active:scale-95">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+</div>
+<!-- Bento Stats -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="p-6 bg-surface-container-low border border-outline-variant/10 flex flex-col items-center text-center group hover:bg-white transition-colors duration-500">
+<span class="material-symbols-outlined text-secondary mb-2 group-hover:scale-110 transition-transform">menu_book</span>
+<p class="text-[10px] font-bold tracking-widest text-on-surface-variant uppercase">পৃষ্ঠা সংখ্যা</p>
+<p class="text-body-lg font-bold text-primary">৫৪০</p>
+</div>
+<div class="p-6 bg-surface-container-low border border-outline-variant/10 flex flex-col items-center text-center group hover:bg-white transition-colors duration-500">
+<span class="material-symbols-outlined text-secondary mb-2 group-hover:scale-110 transition-transform">translate</span>
+<p class="text-[10px] font-bold tracking-widest text-on-surface-variant uppercase">ভাষা</p>
+<p class="text-body-lg font-bold text-primary">বাংলা</p>
+</div>
+<div class="p-6 bg-surface-container-low border border-outline-variant/10 flex flex-col items-center text-center group hover:bg-white transition-colors duration-500">
+<span class="material-symbols-outlined text-secondary mb-2 group-hover:scale-110 transition-transform">calendar_today</span>
+<p class="text-[10px] font-bold tracking-widest text-on-surface-variant uppercase">প্রকাশকাল</p>
+<p class="text-body-lg font-bold text-primary">২০২৪</p>
+</div>
+<div class="p-6 bg-surface-container-low border border-outline-variant/10 flex flex-col items-center text-center group hover:bg-white transition-colors duration-500">
+<span class="material-symbols-outlined text-secondary mb-2 group-hover:scale-110 transition-transform">ink_pen</span>
+<p class="text-[10px] font-bold tracking-widest text-on-surface-variant uppercase">প্রকাশনী</p>
+<p class="text-body-lg font-bold text-primary">মুদ্রা</p>
+</div>
+</div>
+<!-- Synopsis Section -->
+<div class="space-y-12">
+<section class="space-y-6">
+<div class="flex items-center gap-4">
+<h3 class="text-headline-md font-headline-md text-primary whitespace-nowrap">সারসংক্ষেপ</h3>
+<div class="h-[1px] w-full bg-outline-variant/30"></div>
+</div>
+<div class="text-body-lg text-on-surface-variant leading-relaxed space-y-6 text-justify">
+<p>
+<i>মহারাজা কৃষ্ণচন্দ্র ও সমকাল</i> একটি অত্যন্ত গুরুত্বপূর্ণ গবেষণালব্ধ সংকলন যা আঠারো শতকের বাংলার এক বৈপ্লবিক যুগকে উন্মোচিত করে। নদীয়ার মহারাজা কৃষ্ণচন্দ্র রায়ের শাসনকাল ছিল শিল্প, সাহিত্য এবং রাজনীতির এক সন্ধিক্ষণ। পলাশীর যুদ্ধের এক বিতর্কিত অথচ প্রভাবশালী চরিত্র হিসেবে পরিচিত এই মহারাজার প্রভাব ছিল সুদূরপ্রসারী।
+                        </p>
+<p>
+                            শৈবাল সরকার, তমাল বন্দ্যোপাধ্যায় এবং অনির্বাণ জানার সুনিপুণ সম্পাদনায় এই গ্রন্থটি ঐতিহাসিক সত্য এবং আকর্ষণীয় বর্ণনার এক অসাধারণ মেলবন্ধন। এটি সে সময়ের সাংস্কৃতিক পুনর্জাগরণ, বাংলা ভাষার বিবর্তন এবং তৎকালীন সামাজিক কাঠামোর এক নিখুঁত চালচিত্র তুলে ধরে।
+                        </p>
+</div>
+</section>
+<section class="bg-surface-container p-10 rounded-xl border border-outline-variant/20">
+<h3 class="text-headline-md font-headline-md text-primary mb-8">সম্পাদনা পর্ষদ</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="space-y-3">
+<h4 class="font-bold text-primary border-l-2 border-primary pl-3">শৈবাল সরকার</h4>
+<p class="text-caption text-on-surface-variant leading-relaxed">নদীয়ার রাজবংশ এবং প্রাক-ঔপনিবেশিক বাংলার সমাজ-রাজনীতি বিষয়ে বিশেষজ্ঞ ইতিহাসবিদ।</p>
+</div>
+<div class="space-y-3">
+<h4 class="font-bold text-primary border-l-2 border-primary pl-3">তমাল বন্দ্যোপাধ্যায়</h4>
+<p class="text-caption text-on-surface-variant leading-relaxed">বিশিষ্ট সাংস্কৃতিক সমালোচক এবং সংগ্রাহক, যিনি বাংলার প্রাচীন লোকসংস্কৃতি ও রাজদরবারের সাহিত্য সংরক্ষণে নিবেদিত।</p>
+</div>
+<div class="space-y-3">
+<h4 class="font-bold text-primary border-l-2 border-primary pl-3">অনির্বাণ জানা</h4>
+</div>
+</div>
+</section>
+</div>
+<!-- Tags -->
+<div class="flex flex-wrap gap-3 pt-6">
+<span class="text-[10px] font-bold tracking-widest px-4 py-2 bg-white text-secondary border border-outline-variant/50 rounded hover:border-primary transition-colors cursor-default uppercase">ইতিহাস</span>
+<span class="text-[10px] font-bold tracking-widest px-4 py-2 bg-white text-secondary border border-outline-variant/50 rounded hover:border-primary transition-colors cursor-default uppercase">বাঙালি সংস্কৃতি</span>
+<span class="text-[10px] font-bold tracking-widest px-4 py-2 bg-white text-secondary border border-outline-variant/50 rounded hover:border-primary transition-colors cursor-default uppercase">নদীয়ার রাজ ইতিহাস</span>
+<span class="text-[10px] font-bold tracking-widest px-4 py-2 bg-white text-secondary border border-outline-variant/50 rounded hover:border-primary transition-colors cursor-default uppercase">গবেষণা</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Premium Footer -->
+<footer class="bg-surface-container-highest border-t border-outline-variant/30 mt-20">
+<div class="max-w-container-max mx-auto px-margin-desktop py-20">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+<div class="md:col-span-5 space-y-8">
+<span class="text-display-lg font-headline-lg font-bold text-primary tracking-tighter">মুদ্রা প্রকাশনী</span>
+<p class="text-body-md text-on-surface-variant leading-relaxed max-w-sm">
+                    গভীর সাহিত্যকর্মের সংরক্ষণ এবং বাংলার সমৃদ্ধ বুদ্ধিবৃত্তিক ঐতিহ্য উদযাপনের জন্য আমরা নিবেদিত। 
+                </p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-125 transition-transform">auto_stories</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-125 transition-transform">history_edu</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-125 transition-transform">mail</span>
+</div>
+</div>
+<div class="md:col-span-3 space-y-6">
+<h4 class="font-bold text-primary text-[12px] uppercase tracking-widest">প্রয়োজনীয় লিঙ্ক</h4>
+<div class="flex flex-col gap-4 text-body-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">গোপনীয়তা নীতি</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">শিপিং তথ্য</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">যোগাযোগ</a>
+<a class="text-primary font-bold hover:underline" href="#">নিউজলেটার সাইনআপ</a>
+</div>
+</div>
+<div class="md:col-span-4 space-y-6">
+<h4 class="font-bold text-primary text-[12px] uppercase tracking-widest">মুদ্রা প্রকাশনী</h4>
+<p class="text-body-md text-on-surface-variant leading-relaxed">
+                    কৃষ্ণনগর, পশ্চিমবঙ্গ, ভারত।<br/>
+                    কালি ও কাগজের মাধ্যমে মহারাজার উত্তরাধিকার উদযাপন।
+                </p>
+<p class="text-[12px] text-secondary/60 pt-10">
+                    © ২০২৪ বইঘর। মুদ্রা প্রকাশনী, কৃষ্ণনগর। সর্বস্বত্ব সংরক্ষিত।
+                </p>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    function toggleSideNav() {
+        const sideNav = document.getElementById('sideNav');
+        const overlay = document.getElementById('sideNavOverlay');
+        const isOpen = sideNav.style.transform === 'translateX(0px)';
+        
+        if (isOpen) {
+            sideNav.style.transform = 'translateX(100%)';
+            overlay.style.opacity = '0';
+            setTimeout(() => overlay.classList.add('hidden'), 500);
+        } else {
+            overlay.classList.remove('hidden');
+            setTimeout(() => {
+                overlay.style.opacity = '1';
+                sideNav.style.transform = 'translateX(0px)';
+            }, 10);
+        }
+    }
+</script>
+</body></html>

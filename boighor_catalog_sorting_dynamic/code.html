@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="light" lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ক্যাটালগ | বইঘর - ডিজিটাল আতেলিয়ের</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=Hind+Siliguri:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#e0deda",
+                    "secondary-container": "#f2f0ed",
+                    "secondary-fixed-dim": "#c8c6c2",
+                    "on-background": "#1c1c16",
+                    "secondary-fixed": "#e4e2dd",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1c1c16",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#f8f5f0",
+                    "surface-container-highest": "#e6e2d9",
+                    "on-secondary-fixed": "#1b1c19",
+                    "on-surface-variant": "#444748",
+                    "primary-container": "#1c1b1b",
+                    "inverse-primary": "#c8c6c5",
+                    "on-tertiary-fixed": "#191d0e",
+                    "surface-container-high": "#ece8df",
+                    "secondary": "#5e5e5b",
+                    "tertiary": "#000000",
+                    "on-secondary-fixed-variant": "#474744",
+                    "background": "#fdf9f0",
+                    "tertiary-fixed": "#e0e5cc",
+                    "surface-bright": "#fdf9f0",
+                    "outline": "#747878",
+                    "on-tertiary-container": "#818671",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#c4c9b1",
+                    "primary": "#000000",
+                    "surface-container-low": "#faf7f2",
+                    "tertiary-container": "#191d0e",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dedad1",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-primary-fixed": "#1c1b1b",
+                    "inverse-on-surface": "#f5f0e7",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#32302a",
+                    "on-tertiary-fixed-variant": "#444937",
+                    "surface-tint": "#5f5e5e",
+                    "primary-fixed": "#e5e2e1",
+                    "surface": "#fdf9f0",
+                    "surface-variant": "#e6e2d9",
+                    "on-secondary-container": "#63635f",
+                    "on-primary-container": "#858383",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#c8c6c5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "container-max": "1280px",
+                    "stack-md": "24px",
+                    "margin-mobile": "20px",
+                    "gutter": "32px",
+                    "margin-desktop": "64px",
+                    "stack-lg": "48px",
+                    "stack-sm": "12px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Playfair Display", "Hind Siliguri"],
+                    "headline-lg-mobile": ["Playfair Display", "Hind Siliguri"],
+                    "label-md": ["Inter", "Hind Siliguri"],
+                    "headline-lg": ["Playfair Display", "Hind Siliguri"],
+                    "display-lg": ["Playfair Display", "Hind Siliguri"],
+                    "caption": ["Inter", "Hind Siliguri"],
+                    "body-md": ["Hind Siliguri", "Inter"],
+                    "body-lg": ["Hind Siliguri", "Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .premium-shadow {
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+        }
+        .book-hover-effect {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .book-hover-effect:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+        }
+        .nav-underline {
+            position: relative;
+        }
+        .nav-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: currentColor;
+            transition: width 0.3s ease;
+        }
+        .nav-underline:hover::after {
+            width: 100%;
+        }
+        .fade-in {
+            animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md transition-colors duration-300">
+<header class="bg-background/80 backdrop-blur-md border-b border-outline-variant/50 docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center space-x-gutter">
+<a class="text-headline-md font-headline-md tracking-tight text-primary" href="#">বইঘর</a>
+<nav class="hidden md:flex space-x-8">
+<a class="text-primary font-body-md nav-underline" href="#">ক্যাটালগ</a>
+<a class="text-on-surface-variant font-body-md nav-underline" href="#">সংগ্রহ</a>
+<a class="text-on-surface-variant font-body-md nav-underline" href="#">আমাদের কথা</a>
+</nav>
+</div>
+<div class="flex items-center space-x-stack-md flex-1 justify-end max-w-xl">
+<div class="relative w-full max-w-xs group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container border-none focus:ring-1 focus:ring-primary/20 rounded-full pl-10 pr-4 py-2 text-label-md placeholder:text-on-surface-variant/50 transition-all duration-300" placeholder="বই বা লেখক খুঁজুন..." type="text"/>
+</div>
+<div class="flex items-center space-x-4">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+<div class="w-9 h-9 rounded-full bg-secondary-container overflow-hidden ring-1 ring-outline-variant">
+<img alt="প্রোফাইল" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLzsYmwoT4049JhMfM9xeEp4ixnGq5rwHQ8IRl07_Erhs94WOtr6pi-mgh6P9G4CgRtYTNliK3wH1-cuBUDsKaEUglGC7PO1N0fSq6oedpNL1-SNKaarMffgAtVbtAeFUq0x5YFxpaoG8mqydfRccNO1bmeeUPRYb-ZW-wbJoctXpCMdb8-WdDhrFYcon70BupJxlHMzWiJeMbVJVe-20BrX6hShyhRG3ty8-d5rV7rFszzngz9t1axOopdmydFILYKDrd44JHkMYa"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-desktop py-stack-lg flex flex-col md:flex-row gap-gutter">
+<aside class="w-full md:w-64 flex-shrink-0">
+<div class="sticky top-32 space-y-10">
+<div>
+<h3 class="text-label-md font-bold uppercase tracking-widest text-primary/60 mb-6">বিভাগসমূহ</h3>
+<ul class="space-y-4">
+<li>
+<label class="flex items-center group cursor-pointer">
+<input class="w-4 h-4 border-outline-variant bg-transparent text-primary focus:ring-0 focus:ring-offset-0 transition-all" type="checkbox"/>
+<span class="ml-4 text-body-md text-on-surface-variant group-hover:text-primary transition-colors">ইতিহাস</span>
+</label>
+</li>
+<li>
+<label class="flex items-center group cursor-pointer">
+<input class="w-4 h-4 border-outline-variant bg-transparent text-primary focus:ring-0 focus:ring-offset-0 transition-all" type="checkbox"/>
+<span class="ml-4 text-body-md text-on-surface-variant group-hover:text-primary transition-colors">কথাসাহিত্য</span>
+</label>
+</li>
+<li>
+<label class="flex items-center group cursor-pointer">
+<input class="w-4 h-4 border-outline-variant bg-transparent text-primary focus:ring-0 focus:ring-offset-0 transition-all" type="checkbox"/>
+<span class="ml-4 text-body-md text-on-surface-variant group-hover:text-primary transition-colors">পাকপ্রণালী</span>
+</label>
+</li>
+<li>
+<label class="flex items-center group cursor-pointer">
+<input class="w-4 h-4 border-outline-variant bg-transparent text-primary focus:ring-0 focus:ring-offset-0 transition-all" type="checkbox"/>
+<span class="ml-4 text-body-md text-on-surface-variant group-hover:text-primary transition-colors">একাডেমিক</span>
+</label>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="text-label-md font-bold uppercase tracking-widest text-primary/60 mb-6">মূল্য পরিসীমা</h3>
+<div class="space-y-6">
+<input class="w-full h-1 bg-surface-container-highest appearance-none cursor-pointer accent-primary" max="2000" min="100" step="50" type="range"/>
+<div class="flex justify-between text-caption font-medium text-on-surface-variant">
+<span>₹১০০</span>
+<span>₹২০০০+</span>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant">
+<button class="w-full py-3 bg-primary text-on-primary text-label-md font-semibold tracking-wide hover:bg-opacity-90 transition-all">ফিল্টার মুছুন</button>
+</div>
+</div>
+</aside>
+<section class="flex-1">
+<header class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b border-outline-variant pb-8">
+<div class="mb-6 md:mb-0">
+<h1 class="text-headline-lg font-headline-lg mb-3">বইয়ের ক্যাটালগ</h1>
+<p class="text-body-md text-on-surface-variant max-w-lg leading-relaxed">আমাদের সংগৃহীত চমৎকার বইয়ের ভাণ্ডার থেকে আপনার পছন্দের বইটি বেছে নিন।</p>
+</div>
+<div class="flex items-center space-x-4">
+<span class="text-label-md text-on-surface-variant/70 uppercase tracking-tighter">সাজানোর ক্রম:</span>
+<select class="bg-transparent border-none focus:ring-0 text-label-md font-bold cursor-pointer py-0 pl-0 pr-8" id="sort-select">
+<option value="recommended">প্রস্তাবিত</option>
+<option value="low-to-high">মূল্য: নিম্ন থেকে উচ্চ</option>
+<option value="high-to-low">মূল্য: উচ্চ থেকে নিম্ন</option>
+<option value="new">নতুন সংযোজন</option>
+</select>
+</div>
+</header>
+<div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-12" id="book-grid">
+<!-- Book cards will be injected here via JavaScript -->
+</div>
+<div class="mt-20 flex justify-center items-center space-x-2">
+<button class="w-12 h-12 flex items-center justify-center border border-outline-variant hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center bg-primary text-on-primary font-bold">১</button>
+<button class="w-12 h-12 flex items-center justify-center border border-outline-variant hover:bg-primary hover:text-on-primary transition-all">২</button>
+<button class="w-12 h-12 flex items-center justify-center border border-outline-variant hover:bg-primary hover:text-on-primary transition-all">৩</button>
+<button class="w-12 h-12 flex items-center justify-center border border-outline-variant hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+</main>
+<footer class="bg-surface-container mt-20 full-width border-t border-outline-variant/30">
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-12 px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="lg:col-span-2 space-y-6">
+<h2 class="text-headline-md font-headline-md text-primary tracking-tight">বইঘর</h2>
+<p class="text-body-md text-on-surface-variant max-w-md leading-relaxed">
+                মুদ্রা পাবলিকেশনসের ডিজিটাল আতেলিয়ের। আমরা বিশ্বাস করি বই কেবল পাঠ্য নয়, এটি একটি শিল্প। আমাদের প্রতিটি প্রকাশনায় থাকে সেই নিষ্ঠার ছাপ।
+            </p>
+<div class="flex space-x-6 pt-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">language</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-label-md font-bold mb-8 uppercase tracking-[0.2em] text-primary/80">সহযোগিতা</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md nav-underline" href="#">শিপিং তথ্য</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md nav-underline" href="#">গোপনীয়তা নীতি</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md nav-underline" href="#">যোগাযোগ করুন</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-md font-bold mb-8 uppercase tracking-[0.2em] text-primary/80">নিউজলেটার</h4>
+<p class="text-caption text-on-surface-variant mb-6 leading-relaxed">নতুন বই এবং বিশেষ অফার সম্পর্কে জানতে আমাদের সাথে যুক্ত থাকুন।</p>
+<form class="flex flex-col space-y-3">
+<input class="bg-white border-b border-outline-variant focus:border-primary focus:ring-0 p-3 text-body-md placeholder:text-on-surface-variant/40" placeholder="ইমেল ঠিকানা" type="email"/>
+<button class="bg-primary text-on-primary py-4 text-label-md font-bold uppercase tracking-widest hover:bg-opacity-90 transition-all">সাবস্ক্রাইব করুন</button>
+</form>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-outline-variant/20 text-center md:text-left flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+<p class="text-caption text-on-surface-variant opacity-60">© ২০২৪ বইঘর। মুদ্রা পাবলিকেশন, কৃষ্ণনগর। সর্বস্বত্ব সংরক্ষিত।</p>
+<div class="flex space-x-8 text-caption text-on-surface-variant/60">
+<a class="hover:text-primary transition-colors" href="#">শর্তাবলী</a>
+<a class="hover:text-primary transition-colors" href="#">কুকি সেটিংস</a>
+</div>
+</div>
+</footer>
+<script>
+    const books = [
+        {"title": "মহারাজা কৃষ্ণচন্দ্র ও সমকাল", "price": 680, "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAfbg1yJl4wBsHIuvLO0KQQIBiwvqxtfiQdFT0eSgkhLtK2uaBm6fzcFYu4J5zxcGsywbJhHIwa3xbTTdc006m3uxJHJM48PTWETaqbvGV8SRfyDtT2bYDWRNBkBXuemAfCdKEn32Rq4vNQFdXwCGrzrCHO7Wu0woCtp-n6PTK4X7nz-g1PU6LIVET3BVyNs0MBpjbpAZZQWx3wBX9Q-ifrbnjm1IMivk8jDibP6g8jnzpewJCXo7WsuBNyZgIJpAmROH6-Q__JHv3P", "author": "শৈবাল সরকার, তমাল বন্দ্যোপাধ্যায় ও অনির্বাণ জানা", "category": "ইতিহাস ও ঐতিহ্য"},
+        {"title": "অর্গানাইজিং দ্য আনঅর্গানাইজড", "price": 1200, "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCOIuLKCBBvNAdJCErpbb_ujIif-QGa2eG4o_tNHRlWP3QgwNvCPByw6XTy78ylDzM_fWXDkc4GM15mONzDv9TC4h6gynoXlRKn5BgaorjjYygeM8oYAM-70wrZzUADcrYbUu8jRuaylwfCOEF452qaC5XYppsXw-fQKrEA5IdnlcE-s5WmCqeh5vopmB5HjSGnLONFW-7xZJEylMN2PEQjZFF1J1lwjDV3dFxjMBeYgpDG2O0tg8cWjo-9QGs4OvS7Te7qz-I4Voac", "author": "কাঞ্চন সরকার", "category": "একাডেমিক ও সমাজবিদ্যা"},
+        {"title": "নদের দল", "price": 180, "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCdcRHR9Yv39s4stPO4Cu4skptq49igehmfjQYaP43BZHGgeg_CGQpkHrypPNM07SayJkfyiDDdfR53zYAIUZQM9eW-Fexoa49rZDEfug-bLNduTKDYQfMnaCopZ8pO4YoTSge9UuLdlQ6aDNSmDiI49QtkqKp6EXnya3jzgWoXo0zuSEjgwddCWKSDvw_x32od76ycfE1Z3lMP2LstwS4yWqfFKc4dIvcinjUreLM4NfDICuu64_U4f_M__Mle-HOCYrPLijtDCaNP", "author": "দেবাশিস বন্দ্যোপাধ্যায়", "category": "কথাসাহিত্য ও সংস্কৃতি"},
+        {"title": "পরমা অন্তর্ধান রহস্য", "price": 180, "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCFzNRat2ZkEjzhYIrQw73pv-QCyOSstcITA4UWaB-go2BW1pwrU8uPNoYHeU6ltnUFLDbQq1dYsJtHKSHnbMLcAmi9-wGAibQ-cK43_bZbt6dSs701lNn4G98KZUSejK5vM8S0Ynp2Z5ZCxmTpbG_q24q_gA-MO-XnqbBX49unY_4CHgqP77pf4Fa1Y3whjLyVThqAZaweajQcmwFSZRI7pRS4CtQBNgRqUVEp0CosipFnfry1Lfw2hbvzPsQpCsKj-qyz-5nYEIK_", "author": "জয় মজুমদার", "category": "রহস্য ও থ্রিলার"},
+        {"title": "মুঘল ই রসুই", "price": 180, "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuA4RZVXFrugXhL02ZPtQb8YV7u2TxX694z3PEWpe4_QxOR0kKb19ast5q15gcTJRA46wqCEOX66p3VCQZkb2gwjgJQEgvHNihixB96pAYXV5fvLmIQh6xnlwQtas6Nc7VA1VuNqU1n9UnVh2b8_ede-sQ9AT5QGSPVuA1ElIezcbrFaNxgUGjBLUf2kXMuObaiJfhJuo_rkwjRkuXinpeNVScVFe7U00BsOeSjIOtfiGJjuY7mC2ZMIT0sJOWGQN2wyMaMhItu-3QNp", "author": "কুন্তক চট্টোপাধ্যায়", "category": "পাকপ্রণালী"},
+        {"title": "তমাল বন্দ্যোপাধ্যায়ের বারোটি গল্প", "price": 200, "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAxX9fDGn6jaqPcHqixJDvnjgQ7yEvRisnCDS8uF6yDh_bc8ro99QgR2x8p4XazuOcK7lyfh81wVPesaYaQJ3mEXWoR6jsaNTxB5U9GFR6QAF0Zy5z4KZY7tTW-rfFYiKn1FIKWHIFsLW2Odk93ZSwj4e21L34qP4Xuow_67e1uvcGEk-EHmvHLesthNnMSJ-znjWnI5lacQmgKxftvzH95DjxgdlWl0I9JGNnaAPBgff2POHlAepe4vUTcvGVQpcqn95m39vDeTqYr", "author": "তমাল বন্দ্যোপাধ্যায়", "category": "ছোটগল্প"},
+        {"title": "জগদ্ধাত্রীর উৎস সন্ধানে", "price": 350, "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuA4RZVXFrugXhL02ZPtQb8YV7u2TxX694z3PEWpe4_QxOR0kKb19ast5q15gcTJRA46wqCEOX66p3VCQZkb2gwjgJQEgvHNihixB96pAYXV5fvLmIQh6xnlwQtas6Nc7VA1VuNqU1n9UnVh2b8_ede-sQ9AT5QGSPVuA1ElIezcbrFaNxgUGjBLUf2kXMuObaiJfhJuo_rkwjRkuXinpeNVScVFe7U00BsOeSjIOtfiGJjuY7mC2ZMIT0sJOWGQN2wyMaMhItu-3QNp", "author": "সুপ্রতিম কর্মকার", "category": "আধ্যাত্মিক ও গবেষণা"},
+        {"title": "একজন বোধিসত্ত্ব", "price": 180, "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBegz_kNvryFaO9VAScwVs78gsvw6XmTnceKQdvNTqTeuHeVoaUQlzHqtmKvOgLK2FUO9LUoRSIKOyVlxI_MBlHGVZtszf0iuTWbB8xQ0cCUMCInViB8d2DXBOui-3VA8OfCO2k2Meg0LvSS5tLwatXFGBmUe9r56a6BarUif__tz3GMFMcfv4aQyOG4rU6BzG8WqQdliLwrt25Zwq0nQi78xHTacME603J8FcitYO1UUhfM6KYlSrJ55R-f07v5R9hTUF2GXEsdc-s", "author": "অনিরুদ্ধ চক্রবর্তী", "category": "আধ্যাত্মিক ও দর্শন"}
+    ];
+
+    const grid = document.getElementById('book-grid');
+    const sortSelect = document.getElementById('sort-select');
+
+    function renderBooks(bookList) {
+        grid.innerHTML = '';
+        bookList.forEach((book, index) => {
+            const card = document.createElement('div');
+            card.className = 'group cursor-pointer fade-in';
+            card.style.animationDelay = `${index * 50}ms`;
+            card.innerHTML = `
+                <div class="aspect-[3/4.5] bg-surface-container overflow-hidden mb-5 book-hover-effect premium-shadow relative">
+                    <img alt="${book.title}" class="w-full h-full object-cover book-image" src="${book.image}"/>
+                    <div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center p-6">
+                        <button class="bg-white text-primary px-6 py-3 font-label-md transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500 flex items-center shadow-2xl">
+                            <span class="material-symbols-outlined mr-2" style="font-size: 20px;">add_shopping_cart</span>
+                            ব্যাগে যোগ করুন
+                        </button>
+                    </div>
+                </div>
+                <div class="space-y-1">
+                    <h4 class="font-headline-md text-body-lg leading-tight line-clamp-1 group-hover:text-primary transition-colors">${book.title}</h4>
+                    <p class="text-caption uppercase tracking-wider text-on-surface-variant/60">${book.category}</p>
+                    <p class="text-body-md font-bold mt-2">₹${book.price.toLocaleString('bn-IN')}</p>
+                </div>
+            `;
+            
+            // Re-apply parallax effect to newly created elements
+            const img = card.querySelector('.book-image');
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width;
+                const y = (e.clientY - rect.top) / rect.height;
+                img.style.transform = `scale(1.1) translate(${(x - 0.5) * 10}px, ${(y - 0.5) * 10}px)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                img.style.transform = 'scale(1) translate(0, 0)';
+            });
+
+            grid.appendChild(card);
+        });
+    }
+
+    sortSelect.addEventListener('change', (e) => {
+        let sortedBooks = [...books];
+        if (e.target.value === 'low-to-high') {
+            sortedBooks.sort((a, b) => a.price - b.price);
+        } else if (e.target.value === 'high-to-low') {
+            sortedBooks.sort((a, b) => b.price - a.price);
+        }
+        renderBooks(sortedBooks);
+    });
+
+    // Initial render
+    renderBooks(books);
+</script>
+</body></html>

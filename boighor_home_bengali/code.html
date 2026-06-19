@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>বইঘর | সাহিত্যের আত্মার সন্ধানে</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@400;500;600&amp;family=Hind+Siliguri:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c4c7c7",
+                        "secondary-container": "#e1dfdb",
+                        "secondary-fixed-dim": "#c8c6c2",
+                        "on-background": "#1c1c16",
+                        "secondary-fixed": "#e4e2dd",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1c1c16",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f2ede4",
+                        "surface-container-highest": "#e6e2d9",
+                        "on-secondary-fixed": "#1b1c19",
+                        "on-surface-variant": "#444748",
+                        "primary-container": "#1c1b1b",
+                        "inverse-primary": "#c8c6c5",
+                        "on-tertiary-fixed": "#191d0e",
+                        "surface-container-high": "#ece8df",
+                        "secondary": "#5e5e5b",
+                        "tertiary": "#000000",
+                        "on-secondary-fixed-variant": "#474744",
+                        "background": "#fdf9f0",
+                        "tertiary-fixed": "#e0e5cc",
+                        "surface-bright": "#fdf9f0",
+                        "outline": "#747878",
+                        "on-tertiary-container": "#818671",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#c4c9b1",
+                        "primary": "#000000",
+                        "surface-container-low": "#f7f3ea",
+                        "tertiary-container": "#191d0e",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#dedad1",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-primary-fixed": "#1c1b1b",
+                        "inverse-on-surface": "#f5f0e7",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#32302a",
+                        "on-tertiary-fixed-variant": "#444937",
+                        "surface-tint": "#5f5e5e",
+                        "primary-fixed": "#e5e2e1",
+                        "surface": "#fdf9f0",
+                        "surface-variant": "#e6e2d9",
+                        "on-secondary-container": "#63635f",
+                        "on-primary-container": "#858383",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#c8c6c5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0rem",
+                        "lg": "0.125rem",
+                        "xl": "0.25rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "stack-md": "24px",
+                        "margin-mobile": "20px",
+                        "gutter": "32px",
+                        "margin-desktop": "64px",
+                        "stack-lg": "48px",
+                        "stack-sm": "12px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hind Siliguri", "Playfair Display"],
+                        "headline-lg-mobile": ["Hind Siliguri", "Playfair Display"],
+                        "label-md": ["Hind Siliguri", "Inter"],
+                        "headline-lg": ["Hind Siliguri", "Playfair Display"],
+                        "display-lg": ["Hind Siliguri", "Playfair Display"],
+                        "caption": ["Hind Siliguri", "Inter"],
+                        "body-md": ["Hind Siliguri", "Inter"],
+                        "body-lg": ["Hind Siliguri", "Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .book-shadow {
+            box-shadow: 20px 20px 60px #d7d4cc, -20px -20px 60px #ffffff;
+        }
+        .book-card:hover {
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.06);
+            transform: translateY(-8px);
+        }
+        body {
+            font-family: 'Hind Siliguri', 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .premium-border {
+            border-image: linear-gradient(to right, transparent, #c4c7c7, transparent) 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-fixed selection:text-primary">
+<!-- TopNavBar -->
+<header class="bg-background/80 backdrop-blur-md border-b border-outline-variant/30 docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-unit max-w-container-max mx-auto h-24">
+<div class="flex items-center gap-12">
+<a class="flex items-center gap-4 group" href="#">
+<div class="h-12 w-12 rounded-full overflow-hidden border border-outline-variant group-hover:scale-105 transition-transform">
+<img alt="মুদ্রা পাবলিকেশন লোগো" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMApEiBgMumUtLW49C4kfOfQ0p1t0wFQvx4wNr5XjHwTxXfphVa3qG6DuDxpLA6ttxSTZ_FPdA9oK1Th51ObZFyFdGE5lBIsBSbBS9q7aeafQVd0Wa2wruit64GJLHG5elukjdioVewcyjQ0r6JScYlf9olkkGtldibxzmaeLSaUHY6zwrW32Srj8AHQ7oz1AgN-q8NctHyhG9q8takTSTeV5-mC4f7DSI3lK7J83S6vB7lm9H1l93GLqhc3P-8Why_obBxr_HOY1U"/>
+</div>
+<span class="text-2xl font-bold tracking-tight text-primary">বইঘর</span>
+</a>
+<nav class="hidden lg:flex space-x-10">
+<a class="text-primary border-b border-primary pb-0.5 text-sm font-medium hover:opacity-70 transition-all" href="#">ক্যাটালগ</a>
+<a class="text-on-surface-variant hover:text-primary text-sm font-medium transition-all" href="#">সংগ্রহ</a>
+<a class="text-on-surface-variant hover:text-primary text-sm font-medium transition-all" href="#">আমাদের সম্পর্কে</a>
+</nav>
+</div>
+<div class="flex items-center gap-8">
+<div class="hidden md:block relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+<input class="pl-10 pr-4 py-2.5 bg-surface-container-low border border-transparent focus:border-outline-variant focus:bg-white focus:ring-0 w-72 text-sm transition-all" placeholder="বই খুঁজুন..." type="text"/>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors relative">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute -top-2 -right-2 bg-primary text-on-primary text-[10px] w-4 h-4 flex items-center justify-center rounded-full">০</span>
+</button>
+<button class="lg:hidden text-primary" id="menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- SideNavBar (Mobile) -->
+<aside class="fixed right-0 top-0 h-full w-full md:w-96 z-[60] bg-surface-bright border-l border-outline-variant translate-x-full transition-transform duration-500 ease-in-out shadow-2xl flex flex-col p-8" id="side-nav">
+<div class="flex justify-between items-center mb-12">
+<div class="flex items-center gap-4">
+<img alt="মুদ্রা পাবলিকেশন লোগো" class="h-10 w-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMApEiBgMumUtLW49C4kfOfQ0p1t0wFQvx4wNr5XjHwTxXfphVa3qG6DuDxpLA6ttxSTZ_FPdA9oK1Th51ObZFyFdGE5lBIsBSbBS9q7aeafQVd0Wa2wruit64GJLHG5elukjdioVewcyjQ0r6JScYlf9olkkGtldibxzmaeLSaUHY6zwrW32Srj8AHQ7oz1AgN-q8NctHyhG9q8takTSTeV5-mC4f7DSI3lK7J83S6vB7lm9H1l93GLqhc3P-8Why_obBxr_HOY1U"/>
+<div>
+<h2 class="text-xl font-bold text-primary">বইঘর</h2>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">দ্য ডিজিটাল অ্যাটেলিয়ার</p>
+</div>
+</div>
+<button class="text-primary hover:rotate-90 transition-transform duration-300" id="close-nav">
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-5 p-5 text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">home</span>
+<span class="font-medium">হোম</span>
+</a>
+<a class="flex items-center gap-5 p-5 bg-primary text-on-primary font-semibold" href="#">
+<span class="material-symbols-outlined">book_2</span>
+<span>ক্যাটালগ</span>
+</a>
+<a class="flex items-center gap-5 p-5 text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">auto_stories</span>
+<span>সংগ্রহ</span>
+</a>
+<a class="flex items-center gap-5 p-5 text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">shopping_bag</span>
+<span>আমার কার্ট</span>
+</a>
+<a class="flex items-center gap-5 p-5 text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">info</span>
+<span>আমাদের সম্পর্কে</span>
+</a>
+</nav>
+<div class="mt-auto">
+<button class="w-full py-5 bg-primary text-on-primary font-bold hover:bg-primary/90 transition-all uppercase tracking-widest text-sm">চেকআউট করুন</button>
+</div>
+</aside>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-12 md:pt-24 pb-24 md:pb-40">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="z-10">
+<span class="inline-block mb-8 px-5 py-1.5 rounded-full border border-outline-variant font-medium text-[10px] uppercase tracking-[0.2em] text-secondary">স্থাপিত ২০২৪ • মুদ্রা পাবলিকেশন</span>
+<h1 class="font-display-lg text-6xl md:text-7xl text-primary mb-8 leading-[1.1] tracking-tight">সাহিত্যের আত্মার <br/><span class="italic font-normal serif">নিপুণ শিল্পকর্ম</span></h1>
+<p class="text-body-lg text-on-surface-variant mb-12 max-w-lg leading-relaxed opacity-90">ঐতিহাসিক মহাকাব্য থেকে শুরু করে সমসাময়িক মাস্টারপিস—সব মিলিয়ে আমাদের এক অনন্য সংগ্রহ। বিদগ্ধ পাঠকদের জন্য এক পরম আশ্র‍য়।</p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="px-12 py-5 bg-primary text-on-primary font-bold transition-all hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] hover:-translate-y-1 active:translate-y-0">সংগ্রহ দেখুন</button>
+<button class="px-12 py-5 border border-primary/20 text-primary font-bold hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center gap-3">
+<span>ক্যাটালগ</span>
+<span class="material-symbols-outlined text-sm">arrow_outward</span>
+</button>
+</div>
+</div>
+<div class="relative hidden lg:block">
+<div class="relative z-10 flex justify-end">
+<div class="absolute -left-20 top-20 w-80 h-[480px] bg-surface-container-highest/50 -rotate-6 transition-transform duration-1000"></div>
+<div class="w-96 h-[560px] relative overflow-hidden group">
+<img class="w-full h-full object-cover shadow-[40px_40px_80px_rgba(0,0,0,0.1)] transition-all duration-1000 group-hover:scale-105" data-alt="সাহিত্য ও পড়ার আবহের একটি চমৎকার দৃশ্য" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKvCpPgVRArIOmKjC75zeVGSRBPZWp9gRPaaBI785p6Q54MqfkyAfQU2JTZv3vl8RrQSzaY2nxlbWl64Gc4DKqZiPfR88dtID52e74yymFFy_BbwQUGlwTZUtqfDiHt_fpX8gzn_5BtZs0G_qZe_4YYerCAvJPDzwWMKEn91egxsoOapdBOlpF2qK217mnHpo13Cd_GzP57aM7hJ1y9ih5dxJ8C7xYpFoyNPtwk9yT3WRS2yP25k-Dw_f7ZeAYD9XFPpaxP_qPQlvG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- New Arrivals Section -->
+<section class="bg-white py-24 md:py-40">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
+<div>
+<span class="text-[10px] uppercase tracking-[0.3em] text-on-surface-variant mb-4 block">নতুন সংযোজন</span>
+<h2 class="text-4xl md:text-5xl font-bold text-primary">সেরা নতুন বইসমূহ</h2>
+</div>
+<a class="flex items-center gap-3 text-primary font-bold border-b border-primary/20 pb-2 hover:border-primary transition-all group" href="#">
+<span>সবগুলো দেখুন</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">trending_flat</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+<!-- Book Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4.5] overflow-hidden mb-8 transition-all duration-500 book-card bg-surface-container-low border border-outline-variant/20">
+<img alt="মহারাজা কৃষ্ণচন্দ্র ও সমকাল" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAp9ZwoV-VmJAoOiUQx9QYnIq3YZgFnArbmPrPQRnRkfz-QYWqkPMUlwFdnaJE3lonR9PEA4o8YAR26mpC7NGOCp3yqneg2EG1ZcJCpAQg2f4Xvmym8-3kNWtP958jFTjuS1cFT5GHHHXi4tOed-Dfqk6LgqF5_uzy30mAAb7-qoE72x795na5njqlNyFJ92lDs4sZQwQk0JYcPZuqX7Ub0TlpNc0ACgtydoc5LKx3yQ6d64T0yO7AxEwiSxJ7cHZZM_z7tgWzVYes"/>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">মহারাজা কৃষ্ণচন্দ্র</h3>
+<div class="flex justify-between items-center">
+<p class="text-[10px] font-medium text-on-surface-variant uppercase tracking-[0.15em]">ইতিহাস • মুদ্রা</p>
+<p class="text-lg font-bold text-primary">₹৬৫০</p>
+</div>
+</div>
+<!-- Book Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4.5] overflow-hidden mb-8 transition-all duration-500 book-card bg-surface-container-low border border-outline-variant/20">
+<img alt="নদের দল" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuYHAkPkQzDB8fnrCyvS7mhyHxMVfHsL37XCCFp5Gp1KQzXmNkYtaGT148_GJB3NmYIuZzaa-30OzwQAxvGt_aDQNsFtsFMy6LtMag2-VpwGavL4FP8MLIqY-b-c0vcFkMqa_pzuWRrUBXf5aKUFvwVBSJ-p3WT2p3hcit9fBnT4tkjGIDUyXujvbUrrZtk3AXVs29kRkpvxEJvrBwVuMEMTSPhRjqcOo9QFQTKODVcuiPsV0S9p07VkeY4djLlt4kdK47wcJiwH6k"/>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">নদের দল</h3>
+<div class="flex justify-between items-center">
+<p class="text-[10px] font-medium text-on-surface-variant uppercase tracking-[0.15em]">নাটক • দেবাশিস</p>
+<p class="text-lg font-bold text-primary">₹৩২০</p>
+</div>
+</div>
+<!-- Book Card 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4.5] overflow-hidden mb-8 transition-all duration-500 book-card bg-surface-container-low border border-outline-variant/20">
+<img alt="Shadows of the Ghats" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhOalyBOUl0-OuLQn9ogAZQC7uvIs-LDzEeUTEq0KRmCVyaJLCm-qpLtGVGNmCqOTIaHua_2eVovxjQjA0xAyqzNNCDrTf-FgzVVKFjUXc9p8xSr8LUrpdsaDmXMuY_965FIxnSod7GmU06qYLFZKZnEx1CEShzwpyiV8D6l_JDN6hlEM50YEGkPm-iwJFjDE3PD4qCe94skT2lPF9NohGThrKi0ep7933KLhiRgtdhsEt7-BupSI-_7oyk-6lK_Zm7fy1Vv6tlRY6"/>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">ঘাটের ছায়া</h3>
+<div class="flex justify-between items-center">
+<p class="text-[10px] font-medium text-on-surface-variant uppercase tracking-[0.15em]">রহস্য • কল্পকাহিনী</p>
+<p class="text-lg font-bold text-primary">₹৪৮০</p>
+</div>
+</div>
+<!-- Book Card 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4.5] overflow-hidden mb-8 transition-all duration-500 book-card bg-surface-container-low border border-outline-variant/20">
+<img alt="The Digital Atelier" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFJyVHmu5Hn89-hpctWEXljVjnLG3D3ZACwx9UwjGZi4Zd3YQHLLxhn06QwrlxYpwqww4uhtWPDBsPn-q1YEserfXHUv-XmD1YRBoOoRa2rlnJ1wtVPDS76Z_8XE8iONeuriarCPyx6qw1vDmDZoMCt_9eX91ez1SFDmo9GimVzN54_4fTDgGBpvosnkSJEdz_aPvqKT7g4NmqLGGsMqicGbC3TAGx9T2lSOECYnd70xDMmGL9WtydoVjCGw_r_njqe5AzLMdHxKmR"/>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">ডিজিটাল অ্যাটেলিয়ার</h3>
+<div class="flex justify-between items-center">
+<p class="text-[10px] font-medium text-on-surface-variant uppercase tracking-[0.15em]">প্রবন্ধ • সমসাময়িক</p>
+<p class="text-lg font-bold text-primary">₹১৮০</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Author Spotlight Section -->
+<section class="py-24 md:py-40 bg-background overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+<div class="lg:col-span-5 order-2 lg:order-1">
+<span class="text-[10px] font-bold text-on-surface-variant mb-6 block uppercase tracking-[0.3em]">লেখক পরিচিতি</span>
+<h2 class="text-5xl font-bold text-primary mb-8 tracking-tight">কুন্তক চট্টোপাধ্যায়</h2>
+<div class="w-20 h-0.5 bg-primary mb-10"></div>
+<p class="text-2xl text-secondary mb-10 italic leading-relaxed font-light">
+                            "সাহিত্যই একমাত্র জায়গা যেখানে আপনি অন্য কারো গল্পের মধ্যে নিজেকে হারিয়ে নিজেরই সন্ধান পেতে পারেন। 'মুঘল ই রসুই'-এর মাধ্যমে আমি একটি অতীত যুগের সংবেদনশীল ঐতিহ্যকে ধরে রাখতে চেয়েছি।"
+                        </p>
+<p class="text-body-md text-on-surface-variant mb-12 leading-relaxed">
+                            পেশায় ইতিহাসবিদ এবং মনেপ্রাণে এক কথাসাহিত্যিক, কুন্তক চট্টোপাধ্যায় রন্ধনশিল্প এবং সাম্রাজ্যের ইতিহাসের জটিল সন্ধিক্ষণগুলো অন্বেষণ করেন। তাঁর সাম্প্রতিক কাজগুলো সমালোচকদের মহলে ব্যাপক সমাদৃত হয়েছে।
+                        </p>
+<div class="flex items-center gap-16">
+<div>
+<p class="text-4xl font-bold text-primary mb-1">১২+</p>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">প্রকাশনা</p>
+</div>
+<div>
+<p class="text-4xl font-bold text-primary mb-1">৪</p>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">পুরস্কার</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2 flex flex-col md:flex-row gap-8 relative">
+<div class="flex-1 overflow-hidden">
+<img class="w-full aspect-[4/5] object-cover shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" data-alt="লেখক কুন্তক চট্টোপাধ্যায়ের প্রতিকৃতি" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUXGHm0550dQdps7uERSZGaElo-Qg18AvLFx81Fm3gZK9YIogF7ojQvyRAtBETFIPOiVM-0UR87wyni-7ooUyYa1mFsIErrJRqvH1ujfTzjLXsOhKECl7C_NCveJq2S6DO4gD-zdQzQTExa5zeopZjdrNokJpe7hkFhOBwSQxAa7rKBk9WHQaHVRLUq14Qek4MJj1FWeboN79vbZdnoDcIB1cGu76H36MHjAo2baqrMeLeIDousAbpfdsuO-VtdITyONwSli5iskAb"/>
+</div>
+<div class="flex-1 md:mt-24">
+<div class="group relative bg-white p-6 shadow-xl border border-outline-variant/10">
+<img alt="মুঘল ই রসুই বইয়ের প্রচ্ছদ" class="w-full aspect-[2/3] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnqRygGaLF9B6SZbAW1Hcyv9_sKwVAq1HHhVRQC1FKRRRcyOWJN9qccb2iwiew2zqVwWY2elFP-MBb0_A7G43g52RqZJF7dAC58g3kIMNQQi9V4DttPtUeoicSp76bzQNAPCVRXOixNXEoCQimGpSDDtrlri1-EWtaXInROKzFjcr7IN0sMhQGxtb3zj1bfOR1NLzcAIE9kVHRWlu_VETBbC8fKsH-Wr2ozji9G_eXQWAlmk9_as0wOLW4R3T-4KZFoUax_TjA7EVv"/>
+<div class="mt-8">
+<p class="text-[10px] font-bold text-on-surface-variant mb-2 uppercase tracking-widest">সেরা কাজ</p>
+<h4 class="text-2xl font-bold text-primary mb-4">মুঘল ই রসুই</h4>
+<button class="text-xs font-bold text-primary uppercase tracking-[0.2em] border-b border-primary/40 pb-1 hover:border-primary transition-all">বিস্তারিত দেখুন</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-24 md:mb-40">
+<div class="bg-primary text-on-primary py-24 md:py-32 px-12 md:px-24 flex flex-col items-center text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+<div class="relative z-10 max-w-2xl">
+<span class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/60 mb-6 block">নিউজলেটার</span>
+<h2 class="text-4xl md:text-5xl font-bold mb-8">নতুন বইয়ের খবর পেতে চান?</h2>
+<p class="text-lg text-white/70 mb-12 leading-relaxed">আমাদের এক্সক্লুসিভ নিউজলেটারে যোগ দিন এবং নতুন বইয়ের খবর, লেখকের সাক্ষাৎকার এবং বিশেষ অফার সবার আগে জানুন।</p>
+<form class="flex flex-col sm:flex-row gap-4 w-full">
+<input class="flex-1 bg-white/10 border border-white/20 px-8 py-5 text-on-primary placeholder:text-white/40 focus:ring-0 focus:border-white outline-none text-sm transition-all" placeholder="আপনার ইমেইল এড্রেস..." type="email"/>
+<button class="bg-white text-primary px-12 py-5 font-bold hover:bg-surface-container-highest transition-all uppercase text-sm tracking-widest" type="submit">সাবস্ক্রাইব</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant/30 full-width pt-24 pb-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 px-margin-desktop max-w-container-max mx-auto mb-20">
+<div class="lg:col-span-1">
+<div class="flex items-center gap-4 mb-8">
+<img alt="মুদ্রা পাবলিকেশন লোগো" class="h-10 w-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMApEiBgMumUtLW49C4kfOfQ0p1t0wFQvx4wNr5XjHwTxXfphVa3qG6DuDxpLA6ttxSTZ_FPdA9oK1Th51ObZFyFdGE5lBIsBSbBS9q7aeafQVd0Wa2wruit64GJLHG5elukjdioVewcyjQ0r6JScYlf9olkkGtldibxzmaeLSaUHY6zwrW32Srj8AHQ7oz1AgN-q8NctHyhG9q8takTSTeV5-mC4f7DSI3lK7J83S6vB7lm9H1l93GLqhc3P-8Why_obBxr_HOY1U"/>
+<span class="text-2xl font-bold text-primary">বইঘর</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-8">সাহিত্য, ইতিহাস এবং শিল্পের এক ডিজিটাল তীর্থস্থান। মুদ্রা পাবলিকেশনের একটি বিশেষ উদ্যোগ।</p>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">face_nod</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">history_edu</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-sm font-bold text-primary uppercase tracking-[0.2em] mb-8">এক্সপ্লোর</h4>
+<ul class="space-y-4">
+<li><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">নতুন সংযোজন</a></li>
+<li><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">লেখক পরিচিতি</a></li>
+<li><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">আমাদের গল্প</a></li>
+<li><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">সেরা তালিকা</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-bold text-primary uppercase tracking-[0.2em] mb-8">সহায়তা</h4>
+<ul class="space-y-4">
+<li><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">শিপিং তথ্য</a></li>
+<li><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">গোপনীয়তা নীতি</a></li>
+<li><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">যোগাযোগ করুন</a></li>
+<li><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">সাধারণ জিজ্ঞাসা</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-bold text-primary uppercase tracking-[0.2em] mb-8">অফিস</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                    মুদ্রা পাবলিকেশন<br/>
+                    কৃষ্ণনগর, পশ্চিমবঙ্গ<br/>
+                    ভারত - ৭৪১১০১
+                </p>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop pt-12 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-8">
+<p class="text-[10px] text-secondary font-medium uppercase tracking-widest">© ২০২৪ বইঘর। মুদ্রা পাবলিকেশন, কৃষ্ণনগর। সর্বস্বত্ব সংরক্ষিত।</p>
+<div class="flex gap-10">
+<span class="text-[10px] text-on-surface-variant font-medium uppercase tracking-widest cursor-pointer hover:text-primary transition-colors">শর্তাবলী</span>
+<span class="text-[10px] text-on-surface-variant font-medium uppercase tracking-widest cursor-pointer hover:text-primary transition-colors">অ্যাক্সেসিবিলিটি</span>
+</div>
+</div>
+</footer>
+<!-- FAB -->
+<button class="fixed bottom-10 right-10 w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-[0_20px_40px_rgba(0,0,0,0.2)] hover:scale-110 active:scale-95 transition-all z-40 group">
+<span class="material-symbols-outlined text-2xl">chat_bubble</span>
+<span class="absolute right-full mr-4 bg-white text-primary text-[10px] font-bold uppercase tracking-widest py-2 px-4 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">সহায়তা নিন</span>
+</button>
+<script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeNav = document.getElementById('close-nav');
+        const sideNav = document.getElementById('side-nav');
+
+        menuToggle.addEventListener('click', () => {
+            sideNav.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeNav.addEventListener('click', () => {
+            sideNav.classList.add('translate-x-full');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close nav on clicking outside
+        document.addEventListener('click', (e) => {
+            if (!sideNav.contains(e.target) && !menuToggle.contains(e.target)) {
+                sideNav.classList.add('translate-x-full');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Parallax scroll effect for premium aesthetic
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            const heroImage = document.querySelector('.lg\\:block .w-96');
+            if (heroImage) {
+                heroImage.style.transform = `translateY(${scroll * 0.05}px)`;
+            }
+        });
+    </script>
+</body></html>
